@@ -3,12 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Usuario/Desktop/PigMonitor/src/pigmonitor/modelo/ConsultarEnfermedad.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/PigMonitor/src/pigmonitor/PigMonitor.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/PigMonitor/src/pigmonitor/vista/Vista.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/PigMonitor/src/pigmonitor/modelo/Conexion.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/PigMonitor/src/pigmonitor/modelo/Enfermedad.java</file>
-            <file>file:/C:/Users/Usuario/Desktop/PigMonitor/src/pigmonitor/control/ControlEnfermedad.java</file>
+            <file>file:/home/tdnavarrom/Desktop/PigMonitor/PigMonitor/src/pigmonitor/modelo/Conexion.java</file>
+            <file>file:/home/tdnavarrom/Desktop/PigMonitor/PigMonitor/src/pigmonitor/modelo/Alimento.java</file>
+            <file>file:/home/tdnavarrom/Desktop/PigMonitor/PigMonitor/src/pigmonitor/vista/Vista.java</file>
+            <file>file:/home/tdnavarrom/Desktop/PigMonitor/PigMonitor/src/pigmonitor/PigMonitor.java</file>
+            <file>file:/home/tdnavarrom/Desktop/PigMonitor/PigMonitor/src/pigmonitor/control/ControlMedicamento.java</file>
+            <file>file:/home/tdnavarrom/Desktop/PigMonitor/PigMonitor/src/pigmonitor/control/ControlAlimento.java</file>
+            <file>file:/home/tdnavarrom/Desktop/PigMonitor/PigMonitor/src/pigmonitor/modelo/ConsultarMedicamento.java</file>
+            <file>file:/home/tdnavarrom/Desktop/PigMonitor/PigMonitor/src/pigmonitor/modelo/Medicamento.java</file>
         </group>
     </open-files>
 </project-private>
