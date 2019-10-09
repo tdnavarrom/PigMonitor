@@ -52,6 +52,7 @@ public class Vista extends javax.swing.JFrame {
         eliminarLoteButton = new javax.swing.JButton();
         limpiarLoteButton = new javax.swing.JButton();
         idLoteTextField = new javax.swing.JTextField();
+        imagenPig = new javax.swing.JLabel();
         enfermedadPanel = new javax.swing.JPanel();
         enfermedadLabel = new javax.swing.JLabel();
         codigoEnfermedadLabel = new javax.swing.JLabel();
@@ -66,6 +67,7 @@ public class Vista extends javax.swing.JFrame {
         eliminarEnfermedadButton = new javax.swing.JButton();
         limpiarEnfermedadButton = new javax.swing.JButton();
         buscarEnfermedadButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         alimentoPanel = new javax.swing.JPanel();
         alimentoLabel = new javax.swing.JLabel();
         idAlimentoLabel = new javax.swing.JLabel();
@@ -82,10 +84,43 @@ public class Vista extends javax.swing.JFrame {
         modificarAlimentoButton = new javax.swing.JButton();
         eliminarAlimentoButton = new javax.swing.JButton();
         limpiarAlimentoButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        insumoPanel = new javax.swing.JPanel();
+        insumosLabel = new javax.swing.JLabel();
+        codigoInsumoLabel = new javax.swing.JLabel();
+        nombreInsumoLabel = new javax.swing.JLabel();
+        precioInsumoLabel = new javax.swing.JLabel();
+        precioInsumoTextField = new javax.swing.JTextField();
+        codigoInsumoTextField = new javax.swing.JTextField();
+        nombreInsumoTextField = new javax.swing.JTextField();
+        idInsumoTextField = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        modificarInsumoButton = new javax.swing.JButton();
+        eliminarInsumoButton = new javax.swing.JButton();
+        limpiarInsumosButton = new javax.swing.JButton();
+        guardarInsumoButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        medicamentoPanel = new javax.swing.JPanel();
+        medicamentoLabel = new javax.swing.JLabel();
+        codigoMedicamentoLabel = new javax.swing.JLabel();
+        nombreMedicamentoLabel = new javax.swing.JLabel();
+        numeroExistenciasLabel = new javax.swing.JLabel();
+        precioMedicamentoLabel = new javax.swing.JLabel();
+        codigoMedicamentoTextField = new javax.swing.JTextField();
+        nombreMedicamentoTextField = new javax.swing.JTextField();
+        numeroExistenciasTextField = new javax.swing.JTextField();
+        precioMedicamentoTextField = new javax.swing.JTextField();
+        idMedicamentoTextField = new javax.swing.JTextField();
+        buscarMedicamentoButton = new javax.swing.JButton();
+        limpiarMedicamentoButton = new javax.swing.JButton();
+        guardarMedicamentoButton = new javax.swing.JButton();
+        modificarMedicamentoButton = new javax.swing.JButton();
+        eliminarMedicamentoButton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        loteLabel.setText("Entrada de Datos");
+        loteLabel.setText("Entrada de Datos Lote");
 
         pesoLoteLabel.setText("Ingrese el Peso Promedio del Lote");
 
@@ -117,6 +152,8 @@ public class Vista extends javax.swing.JFrame {
 
         limpiarLoteButton.setText("Limpiar");
 
+        imagenPig.setIcon(new javax.swing.ImageIcon("C:\\Users\\Usuario\\Desktop\\PigMonitor\\Images\\year_of_pig_32px.png")); // NOI18N
+
         javax.swing.GroupLayout lotePanelLayout = new javax.swing.GroupLayout(lotePanel);
         lotePanel.setLayout(lotePanelLayout);
         lotePanelLayout.setHorizontalGroup(
@@ -124,93 +161,102 @@ public class Vista extends javax.swing.JFrame {
             .addGroup(lotePanelLayout.createSequentialGroup()
                 .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(lotePanelLayout.createSequentialGroup()
-                        .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(lotePanelLayout.createSequentialGroup()
-                                .addGap(201, 201, 201)
-                                .addComponent(loteLabel))
-                            .addGroup(lotePanelLayout.createSequentialGroup()
-                                .addGap(184, 184, 184)
-                                .addComponent(modificarLoteButton)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(268, 268, 268)
+                        .addComponent(loteLabel)
+                        .addGap(4, 4, 4)
+                        .addComponent(imagenPig))
                     .addGroup(lotePanelLayout.createSequentialGroup()
-                        .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(10, 10, 10)
+                        .addComponent(numHembrasLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(118, 118, 118)
+                        .addComponent(numHembrasTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(lotePanelLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(numMachosLabel)
+                        .addGap(174, 174, 174)
+                        .addComponent(numMachosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(lotePanelLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(eliminarLoteButton)
                             .addGroup(lotePanelLayout.createSequentialGroup()
-                                .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(lotePanelLayout.createSequentialGroup()
-                                        .addGap(30, 30, 30)
-                                        .addComponent(guardarLoteButton)
-                                        .addGap(252, 252, 252)
-                                        .addComponent(eliminarLoteButton))
-                                    .addGroup(lotePanelLayout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addComponent(numLoteLabel))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lotePanelLayout.createSequentialGroup()
-                                        .addContainerGap()
-                                        .addComponent(pesoLoteLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(pesoLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lotePanelLayout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lotePanelLayout.createSequentialGroup()
-                                        .addComponent(numHembrasLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(numHembrasTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lotePanelLayout.createSequentialGroup()
-                                        .addComponent(numMachosLabel)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(numMachosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lotePanelLayout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(codigoLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 153, Short.MAX_VALUE)
-                        .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(buscarLoteButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(idLoteTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(limpiarLoteButton, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addContainerGap())
+                                .addComponent(pesoLoteLabel)
+                                .addGap(149, 149, 149)
+                                .addComponent(pesoLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, lotePanelLayout.createSequentialGroup()
+                .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(lotePanelLayout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(guardarLoteButton)
+                        .addGap(75, 75, 75)
+                        .addComponent(modificarLoteButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(limpiarLoteButton))
+                    .addGroup(lotePanelLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(idLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(lotePanelLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(numLoteLabel)
+                        .addGap(187, 187, 187)
+                        .addComponent(codigoLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(buscarLoteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(64, 64, 64))
         );
         lotePanelLayout.setVerticalGroup(
             lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(lotePanelLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addComponent(loteLabel)
                 .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(lotePanelLayout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(codigoLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(numLoteLabel))
-                        .addGap(25, 25, 25)
-                        .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(numHembrasLabel)
-                            .addComponent(numHembrasTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(numMachosLabel)
-                            .addComponent(numMachosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(pesoLoteLabel)
-                            .addComponent(pesoLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(75, 75, 75)
-                        .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(guardarLoteButton)
-                            .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(modificarLoteButton)
-                                .addComponent(eliminarLoteButton))
-                            .addComponent(limpiarLoteButton)))
+                        .addGap(11, 11, 11)
+                        .addComponent(loteLabel))
+                    .addComponent(imagenPig))
+                .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(lotePanelLayout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(buscarLoteButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(idLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(42, 42, 42)
+                        .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(lotePanelLayout.createSequentialGroup()
+                                .addGap(3, 3, 3)
+                                .addComponent(numLoteLabel))
+                            .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(codigoLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(buscarLoteButton)))
+                        .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(lotePanelLayout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(numHembrasLabel))
+                            .addGroup(lotePanelLayout.createSequentialGroup()
+                                .addGap(23, 23, 23)
+                                .addComponent(numHembrasTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(lotePanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(idLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(30, 30, 30)
+                .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(lotePanelLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(numMachosLabel))
+                    .addComponent(numMachosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(lotePanelLayout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(pesoLoteLabel))
+                    .addComponent(pesoLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(57, 57, 57)
+                .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(limpiarLoteButton)
+                    .addComponent(eliminarLoteButton)
+                    .addComponent(modificarLoteButton)
+                    .addComponent(guardarLoteButton))
+                .addGap(18, 18, 18))
         );
 
         jTabbedPane1.addTab("Lote", lotePanel);
 
-        enfermedadLabel.setText("Entrada de Datos");
+        enfermedadLabel.setText("Entrada de Datos de Enfermedad");
 
         codigoEnfermedadLabel.setText("Ingrese el Numero de la Enfermedad");
 
@@ -249,21 +295,12 @@ public class Vista extends javax.swing.JFrame {
 
         buscarEnfermedadButton.setText("Buscar");
 
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Usuario\\Desktop\\PigMonitor\\Images\\hypertension_50px.png")); // NOI18N
+
         javax.swing.GroupLayout enfermedadPanelLayout = new javax.swing.GroupLayout(enfermedadPanel);
         enfermedadPanel.setLayout(enfermedadPanelLayout);
         enfermedadPanelLayout.setHorizontalGroup(
             enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(enfermedadPanelLayout.createSequentialGroup()
-                .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(enfermedadPanelLayout.createSequentialGroup()
-                        .addGap(210, 210, 210)
-                        .addComponent(enfermedadLabel))
-                    .addGroup(enfermedadPanelLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(numCerdosAfectLabel)
-                        .addGap(48, 48, 48)
-                        .addComponent(numCerdosAfectTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(193, Short.MAX_VALUE))
             .addGroup(enfermedadPanelLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -286,16 +323,32 @@ public class Vista extends javax.swing.JFrame {
                 .addComponent(modificarEnfermedadButton)
                 .addGap(56, 56, 56)
                 .addComponent(eliminarEnfermedadButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 208, Short.MAX_VALUE)
                 .addComponent(limpiarEnfermedadButton)
                 .addGap(43, 43, 43))
+            .addGroup(enfermedadPanelLayout.createSequentialGroup()
+                .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(enfermedadPanelLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(numCerdosAfectLabel)
+                        .addGap(48, 48, 48)
+                        .addComponent(numCerdosAfectTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(enfermedadPanelLayout.createSequentialGroup()
+                        .addGap(236, 236, 236)
+                        .addComponent(enfermedadLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         enfermedadPanelLayout.setVerticalGroup(
             enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(enfermedadPanelLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(enfermedadLabel)
-                .addGap(51, 51, 51)
+                .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(enfermedadPanelLayout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(enfermedadLabel)))
+                .addGap(71, 71, 71)
                 .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(codigoEnfermedadLabel)
                     .addComponent(codigoEnfermedadTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -310,55 +363,44 @@ public class Vista extends javax.swing.JFrame {
                 .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(numCerdosAfectLabel)
                     .addComponent(numCerdosAfectTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 83, Short.MAX_VALUE)
+                .addGap(58, 58, 58)
                 .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(guardarEnfermedadButton)
                     .addComponent(modificarEnfermedadButton)
                     .addComponent(eliminarEnfermedadButton)
                     .addComponent(limpiarEnfermedadButton))
-                .addGap(37, 37, 37))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Enfermedad", enfermedadPanel);
 
-        alimentoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        alimentoLabel.setText("Entrada de Datos");
-        alimentoPanel.add(alimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, -1));
+        alimentoLabel.setText("Entrada de Datos de Alimentos");
 
         idAlimentoLabel.setText("Ingrese el Numero de Alimento");
-        alimentoPanel.add(idAlimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, -1, -1));
 
         nombreAlimentoLabel.setText("Ingrese el Nombre del alimento ");
-        alimentoPanel.add(nombreAlimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, -1, -1));
 
         numBultosLabel.setText("Ingrese el Numero de Bultos");
-        alimentoPanel.add(numBultosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
 
         precioAlimentoLabel.setText("Ingrese el Precio Total");
-        alimentoPanel.add(precioAlimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, -1, -1));
 
         codigoAlimentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 codigoAlimentoTextFieldActionPerformed(evt);
             }
         });
-        alimentoPanel.add(codigoAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, 90, -1));
 
         nombreAlimentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreAlimentoTextFieldActionPerformed(evt);
             }
         });
-        alimentoPanel.add(nombreAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 120, 90, -1));
-        alimentoPanel.add(numBultosTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 90, -1));
 
         precioAlimentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 precioAlimentoTextFieldActionPerformed(evt);
             }
         });
-        alimentoPanel.add(precioAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 90, -1));
 
         buscarAlimentoButton.setText("Buscar");
         buscarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -366,8 +408,6 @@ public class Vista extends javax.swing.JFrame {
                 buscarAlimentoButtonActionPerformed(evt);
             }
         });
-        alimentoPanel.add(buscarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 70, 80, -1));
-        alimentoPanel.add(idAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 120, 80, -1));
 
         guardarAlimentoButton.setText("Guardar");
         guardarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -375,7 +415,6 @@ public class Vista extends javax.swing.JFrame {
                 guardarAlimentoButtonActionPerformed(evt);
             }
         });
-        alimentoPanel.add(guardarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, -1, -1));
 
         modificarAlimentoButton.setText("Modificar");
         modificarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -383,7 +422,6 @@ public class Vista extends javax.swing.JFrame {
                 modificarAlimentoButtonActionPerformed(evt);
             }
         });
-        alimentoPanel.add(modificarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, -1, -1));
 
         eliminarAlimentoButton.setText("Eliminar");
         eliminarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -391,7 +429,6 @@ public class Vista extends javax.swing.JFrame {
                 eliminarAlimentoButtonActionPerformed(evt);
             }
         });
-        alimentoPanel.add(eliminarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, -1, -1));
 
         limpiarAlimentoButton.setText("Limpiar");
         limpiarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -399,9 +436,261 @@ public class Vista extends javax.swing.JFrame {
                 limpiarAlimentoButtonActionPerformed(evt);
             }
         });
-        alimentoPanel.add(limpiarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, -1, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Usuario\\Desktop\\PigMonitor\\Images\\farm_with_silo_64px.png")); // NOI18N
+
+        javax.swing.GroupLayout alimentoPanelLayout = new javax.swing.GroupLayout(alimentoPanel);
+        alimentoPanel.setLayout(alimentoPanelLayout);
+        alimentoPanelLayout.setHorizontalGroup(
+            alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(alimentoPanelLayout.createSequentialGroup()
+                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(alimentoPanelLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(idAlimentoLabel)
+                        .addGap(83, 83, 83)
+                        .addComponent(codigoAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(140, 140, 140)
+                        .addComponent(buscarAlimentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(alimentoPanelLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(nombreAlimentoLabel)
+                        .addGap(79, 79, 79)
+                        .addComponent(nombreAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(140, 140, 140)
+                        .addComponent(idAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(alimentoPanelLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(numBultosLabel)
+                        .addGap(95, 95, 95)
+                        .addComponent(numBultosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(alimentoPanelLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(precioAlimentoLabel)
+                        .addGap(123, 123, 123)
+                        .addComponent(precioAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(alimentoPanelLayout.createSequentialGroup()
+                        .addGap(100, 100, 100)
+                        .addComponent(guardarAlimentoButton)
+                        .addGap(49, 49, 49)
+                        .addComponent(modificarAlimentoButton)
+                        .addGap(55, 55, 55)
+                        .addComponent(eliminarAlimentoButton)
+                        .addGap(51, 51, 51)
+                        .addComponent(limpiarAlimentoButton))
+                    .addGroup(alimentoPanelLayout.createSequentialGroup()
+                        .addGap(244, 244, 244)
+                        .addComponent(alimentoLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2)))
+                .addGap(75, 75, 75))
+        );
+        alimentoPanelLayout.setVerticalGroup(
+            alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(alimentoPanelLayout.createSequentialGroup()
+                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(alimentoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2))
+                    .addGroup(alimentoPanelLayout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(alimentoLabel)))
+                .addGap(45, 45, 45)
+                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(idAlimentoLabel)
+                    .addComponent(codigoAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buscarAlimentoButton))
+                .addGap(27, 27, 27)
+                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nombreAlimentoLabel)
+                    .addComponent(nombreAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(idAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(numBultosLabel)
+                    .addComponent(numBultosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(precioAlimentoLabel)
+                    .addComponent(precioAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(guardarAlimentoButton)
+                    .addComponent(modificarAlimentoButton)
+                    .addComponent(eliminarAlimentoButton)
+                    .addComponent(limpiarAlimentoButton))
+                .addContainerGap())
+        );
 
         jTabbedPane1.addTab("Alimento", alimentoPanel);
+
+        insumoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        insumosLabel.setText("Entrada de Datos de Insumos");
+        insumoPanel.add(insumosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, -1, -1));
+
+        codigoInsumoLabel.setText("Codigo de Insumo");
+        insumoPanel.add(codigoInsumoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
+
+        nombreInsumoLabel.setText("Nombre de Insumo");
+        insumoPanel.add(nombreInsumoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
+
+        precioInsumoLabel.setText("Precio del Insumo");
+        insumoPanel.add(precioInsumoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, -1, -1));
+        insumoPanel.add(precioInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 130, -1));
+        insumoPanel.add(codigoInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 130, -1));
+        insumoPanel.add(nombreInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 130, -1));
+        insumoPanel.add(idInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 60, -1));
+
+        jButton1.setText("Buscar");
+        insumoPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 80, -1));
+
+        modificarInsumoButton.setText("Modificar");
+        modificarInsumoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                modificarInsumoButtonActionPerformed(evt);
+            }
+        });
+        insumoPanel.add(modificarInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, -1, -1));
+
+        eliminarInsumoButton.setText("Eliminar");
+        insumoPanel.add(eliminarInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, -1, -1));
+
+        limpiarInsumosButton.setText("Limpiar");
+        insumoPanel.add(limpiarInsumosButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, -1, -1));
+
+        guardarInsumoButton.setText("Guardar");
+        insumoPanel.add(guardarInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\Usuario\\Desktop\\PigMonitor\\Images\\user_manual_50px.png")); // NOI18N
+        insumoPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, -1, -1));
+
+        jTabbedPane1.addTab("Insumos", insumoPanel);
+
+        medicamentoLabel.setText("Entrada de Datos de Medicamentos");
+
+        codigoMedicamentoLabel.setText("Codigo de Medicamento");
+
+        nombreMedicamentoLabel.setText("Nombre de Medicamento ");
+
+        numeroExistenciasLabel.setText("Numero de Existencias ");
+
+        precioMedicamentoLabel.setText("Precio por Unidad");
+
+        codigoMedicamentoTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                codigoMedicamentoTextFieldActionPerformed(evt);
+            }
+        });
+
+        precioMedicamentoTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                precioMedicamentoTextFieldActionPerformed(evt);
+            }
+        });
+
+        buscarMedicamentoButton.setText("Buscar");
+
+        limpiarMedicamentoButton.setText("Limpiar");
+
+        guardarMedicamentoButton.setText("Guardar");
+
+        modificarMedicamentoButton.setText("Modificar");
+
+        eliminarMedicamentoButton.setText("Eliminar");
+
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\Usuario\\Desktop\\PigMonitor\\Images\\syringe_50px.png")); // NOI18N
+
+        javax.swing.GroupLayout medicamentoPanelLayout = new javax.swing.GroupLayout(medicamentoPanel);
+        medicamentoPanel.setLayout(medicamentoPanelLayout);
+        medicamentoPanelLayout.setHorizontalGroup(
+            medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(medicamentoPanelLayout.createSequentialGroup()
+                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(guardarMedicamentoButton)
+                        .addGap(79, 79, 79)
+                        .addComponent(modificarMedicamentoButton)
+                        .addGap(85, 85, 85)
+                        .addComponent(eliminarMedicamentoButton)
+                        .addGap(91, 91, 91)
+                        .addComponent(limpiarMedicamentoButton))
+                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
+                        .addGap(216, 216, 216)
+                        .addComponent(medicamentoLabel)
+                        .addGap(40, 40, 40)
+                        .addComponent(jLabel4))
+                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(medicamentoPanelLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(codigoMedicamentoLabel)
+                                .addGap(56, 56, 56)
+                                .addComponent(codigoMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(medicamentoPanelLayout.createSequentialGroup()
+                                .addComponent(nombreMedicamentoLabel)
+                                .addGap(59, 59, 59)
+                                .addComponent(nombreMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(medicamentoPanelLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(numeroExistenciasLabel)
+                                .addGap(59, 59, 59)
+                                .addComponent(numeroExistenciasTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(medicamentoPanelLayout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(precioMedicamentoLabel)
+                                .addGap(56, 56, 56)
+                                .addComponent(precioMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(115, 115, 115)
+                        .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(buscarMedicamentoButton)
+                            .addComponent(idMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(80, 80, 80))
+        );
+        medicamentoPanelLayout.setVerticalGroup(
+            medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(medicamentoPanelLayout.createSequentialGroup()
+                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel4))
+                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
+                        .addComponent(medicamentoLabel)))
+                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(codigoMedicamentoLabel)
+                            .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(codigoMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(buscarMedicamentoButton)))
+                        .addGap(25, 25, 25)
+                        .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(nombreMedicamentoLabel)
+                            .addComponent(nombreMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(idMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20)
+                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(numeroExistenciasLabel)
+                    .addComponent(numeroExistenciasTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(precioMedicamentoLabel)
+                    .addComponent(precioMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(78, 78, 78)
+                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(guardarMedicamentoButton)
+                    .addComponent(modificarMedicamentoButton)
+                    .addComponent(eliminarMedicamentoButton)
+                    .addComponent(limpiarMedicamentoButton)))
+        );
+
+        jTabbedPane1.addTab("Medicamento", medicamentoPanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -478,6 +767,18 @@ public class Vista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_buscarAlimentoButtonActionPerformed
 
+    private void codigoMedicamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoMedicamentoTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_codigoMedicamentoTextFieldActionPerformed
+
+    private void precioMedicamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_precioMedicamentoTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_precioMedicamentoTextFieldActionPerformed
+
+    private void modificarInsumoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarInsumoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_modificarInsumoButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -520,35 +821,64 @@ public class Vista extends javax.swing.JFrame {
     public javax.swing.JButton buscarAlimentoButton;
     public javax.swing.JButton buscarEnfermedadButton;
     public javax.swing.JButton buscarLoteButton;
+    private javax.swing.JButton buscarMedicamentoButton;
     public javax.swing.JTextField codigoAlimentoTextField;
     private javax.swing.JLabel codigoEnfermedadLabel;
     public javax.swing.JTextField codigoEnfermedadTextField;
+    private javax.swing.JLabel codigoInsumoLabel;
+    private javax.swing.JTextField codigoInsumoTextField;
     public javax.swing.JTextField codigoLoteTextField;
+    private javax.swing.JLabel codigoMedicamentoLabel;
+    private javax.swing.JTextField codigoMedicamentoTextField;
     public javax.swing.JButton eliminarAlimentoButton;
     public javax.swing.JButton eliminarEnfermedadButton;
+    private javax.swing.JButton eliminarInsumoButton;
     public javax.swing.JButton eliminarLoteButton;
+    private javax.swing.JButton eliminarMedicamentoButton;
     private javax.swing.JLabel enfermedadLabel;
     private javax.swing.JPanel enfermedadPanel;
     public javax.swing.JButton guardarAlimentoButton;
     public javax.swing.JButton guardarEnfermedadButton;
+    private javax.swing.JButton guardarInsumoButton;
     public javax.swing.JButton guardarLoteButton;
+    private javax.swing.JButton guardarMedicamentoButton;
     private javax.swing.JLabel idAlimentoLabel;
     public javax.swing.JTextField idAlimentoTextField;
     public javax.swing.JTextField idEnfermedadTextField;
+    private javax.swing.JTextField idInsumoTextField;
     public javax.swing.JTextField idLoteTextField;
+    private javax.swing.JTextField idMedicamentoTextField;
+    private javax.swing.JLabel imagenPig;
+    private javax.swing.JPanel insumoPanel;
+    private javax.swing.JLabel insumosLabel;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTabbedPane jTabbedPane1;
     public javax.swing.JButton limpiarAlimentoButton;
     public javax.swing.JButton limpiarEnfermedadButton;
+    private javax.swing.JButton limpiarInsumosButton;
     public javax.swing.JButton limpiarLoteButton;
+    private javax.swing.JButton limpiarMedicamentoButton;
     private javax.swing.JLabel loteLabel;
     private javax.swing.JPanel lotePanel;
+    private javax.swing.JLabel medicamentoLabel;
+    private javax.swing.JPanel medicamentoPanel;
     public javax.swing.JButton modificarAlimentoButton;
     public javax.swing.JButton modificarEnfermedadButton;
+    private javax.swing.JButton modificarInsumoButton;
     public javax.swing.JButton modificarLoteButton;
+    private javax.swing.JButton modificarMedicamentoButton;
     private javax.swing.JLabel nombreAlimentoLabel;
     public javax.swing.JTextField nombreAlimentoTextField;
     private javax.swing.JLabel nombreEnfermedadLabel;
     public javax.swing.JTextField nombreEnfermedadTextField;
+    private javax.swing.JLabel nombreInsumoLabel;
+    private javax.swing.JTextField nombreInsumoTextField;
+    private javax.swing.JLabel nombreMedicamentoLabel;
+    private javax.swing.JTextField nombreMedicamentoTextField;
     private javax.swing.JLabel numBultosLabel;
     public javax.swing.JTextField numBultosTextField;
     private javax.swing.JLabel numCerdosAfectLabel;
@@ -558,9 +888,15 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel numLoteLabel;
     private javax.swing.JLabel numMachosLabel;
     public javax.swing.JTextField numMachosTextField;
+    private javax.swing.JLabel numeroExistenciasLabel;
+    private javax.swing.JTextField numeroExistenciasTextField;
     private javax.swing.JLabel pesoLoteLabel;
     public javax.swing.JTextField pesoLoteTextField;
     private javax.swing.JLabel precioAlimentoLabel;
     public javax.swing.JTextField precioAlimentoTextField;
+    private javax.swing.JLabel precioInsumoLabel;
+    private javax.swing.JTextField precioInsumoTextField;
+    private javax.swing.JLabel precioMedicamentoLabel;
+    private javax.swing.JTextField precioMedicamentoTextField;
     // End of variables declaration//GEN-END:variables
 }

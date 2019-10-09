@@ -20,9 +20,9 @@ import javax.swing.JOptionPane;
  */
 public class Conexion {
     
-    private final String base = "pig_monitor";
+    private final String base = "pigmonitor";
     private final String username = "root";
-    private final String password = "TomasDavid2001";
+    private final String password = "pitufo2013";
     private final String url = "jdbc:mysql://localhost:3306/" + base;
     private Connection con = null;
     
