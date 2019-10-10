@@ -94,7 +94,7 @@ public class Vista extends javax.swing.JFrame {
         codigoInsumoTextField = new javax.swing.JTextField();
         nombreInsumoTextField = new javax.swing.JTextField();
         idInsumoTextField = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        buscarInsumoButton = new javax.swing.JButton();
         modificarInsumoButton = new javax.swing.JButton();
         eliminarInsumoButton = new javax.swing.JButton();
         limpiarInsumosButton = new javax.swing.JButton();
@@ -531,8 +531,8 @@ public class Vista extends javax.swing.JFrame {
         insumoPanel.add(nombreInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 130, -1));
         insumoPanel.add(idInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 60, -1));
 
-        jButton1.setText("Buscar");
-        insumoPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 80, -1));
+        buscarInsumoButton.setText("Buscar");
+        insumoPanel.add(buscarInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 80, -1));
 
         modificarInsumoButton.setText("Modificar");
         modificarInsumoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -859,38 +859,38 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JPanel alimentoPanel;
     public javax.swing.JButton buscarAlimentoButton;
     public javax.swing.JButton buscarEnfermedadButton;
+    public javax.swing.JButton buscarInsumoButton;
     public javax.swing.JButton buscarLoteButton;
     public javax.swing.JButton buscarMedicamentoButton;
     public javax.swing.JTextField codigoAlimentoTextField;
     private javax.swing.JLabel codigoEnfermedadLabel;
     public javax.swing.JTextField codigoEnfermedadTextField;
     private javax.swing.JLabel codigoInsumoLabel;
-    private javax.swing.JTextField codigoInsumoTextField;
+    public javax.swing.JTextField codigoInsumoTextField;
     public javax.swing.JTextField codigoLoteTextField;
     private javax.swing.JLabel codigoMedicamentoLabel;
     public javax.swing.JTextField codigoMedicamentoTextField;
     public javax.swing.JButton eliminarAlimentoButton;
     public javax.swing.JButton eliminarEnfermedadButton;
-    private javax.swing.JButton eliminarInsumoButton;
+    public javax.swing.JButton eliminarInsumoButton;
     public javax.swing.JButton eliminarLoteButton;
     public javax.swing.JButton eliminarMedicamentoButton;
     private javax.swing.JLabel enfermedadLabel;
     private javax.swing.JPanel enfermedadPanel;
     public javax.swing.JButton guardarAlimentoButton;
     public javax.swing.JButton guardarEnfermedadButton;
-    private javax.swing.JButton guardarInsumoButton;
+    public javax.swing.JButton guardarInsumoButton;
     public javax.swing.JButton guardarLoteButton;
     public javax.swing.JButton guardarMedicamentoButton;
     private javax.swing.JLabel idAlimentoLabel;
     public javax.swing.JTextField idAlimentoTextField;
     public javax.swing.JTextField idEnfermedadTextField;
-    private javax.swing.JTextField idInsumoTextField;
+    public javax.swing.JTextField idInsumoTextField;
     public javax.swing.JTextField idLoteTextField;
     public javax.swing.JTextField idMedicamentoTextField;
     private javax.swing.JLabel imagenPig;
     private javax.swing.JPanel insumoPanel;
     private javax.swing.JLabel insumosLabel;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -898,7 +898,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     public javax.swing.JButton limpiarAlimentoButton;
     public javax.swing.JButton limpiarEnfermedadButton;
-    private javax.swing.JButton limpiarInsumosButton;
+    public javax.swing.JButton limpiarInsumosButton;
     public javax.swing.JButton limpiarLoteButton;
     public javax.swing.JButton limpiarMedicamentoButton;
     private javax.swing.JLabel loteLabel;
@@ -907,7 +907,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JPanel medicamentoPanel;
     public javax.swing.JButton modificarAlimentoButton;
     public javax.swing.JButton modificarEnfermedadButton;
-    private javax.swing.JButton modificarInsumoButton;
+    public javax.swing.JButton modificarInsumoButton;
     public javax.swing.JButton modificarLoteButton;
     public javax.swing.JButton modificarMedicamentoButton;
     private javax.swing.JLabel nombreAlimentoLabel;
@@ -915,7 +915,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel nombreEnfermedadLabel;
     public javax.swing.JTextField nombreEnfermedadTextField;
     private javax.swing.JLabel nombreInsumoLabel;
-    private javax.swing.JTextField nombreInsumoTextField;
+    public javax.swing.JTextField nombreInsumoTextField;
     private javax.swing.JLabel nombreMedicamentoLabel;
     public javax.swing.JTextField nombreMedicamentoTextField;
     private javax.swing.JLabel numBultosLabel;
@@ -934,7 +934,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel precioAlimentoLabel;
     public javax.swing.JTextField precioAlimentoTextField;
     private javax.swing.JLabel precioInsumoLabel;
-    private javax.swing.JTextField precioInsumoTextField;
+    public javax.swing.JTextField precioInsumoTextField;
     private javax.swing.JLabel precioMedicamentoLabel;
     public javax.swing.JTextField precioMedicamentoTextField;
     // End of variables declaration//GEN-END:variables

@@ -14,6 +14,9 @@ import pigmonitor.modelo.Alimento;
 import pigmonitor.control.ControlMedicamento;
 import pigmonitor.modelo.ConsultarMedicamento;
 import pigmonitor.modelo.Medicamento;
+import pigmonitor.control.ControlInsumos;
+import pigmonitor.modelo.ConsultarInsumos;
+import pigmonitor.modelo.Insumos;
 import pigmonitor.vista.Vista;
 
 /**
@@ -35,14 +38,22 @@ public class PigMonitor {
         
         Medicamento med = new Medicamento();
         ConsultarMedicamento medC = new ConsultarMedicamento();
+
+        Insumos insumo = new Insumos();
+        ConsultarInsumos insumoC = new ConsultarInsumos();
         
         Vista vista = new Vista();
         
         ControlEnfermedad ctrlE = new ControlEnfermedad(enfe, enfeC, vista);
         ControlAlimento ctrlA = new ControlAlimento(food, foodC, vista);
         ControlMedicamento ctrlM = new ControlMedicamento(med, medC, vista);
+        ControlInsumos ctrlI = new ControlInsumos(insumo, insumoC, vista);
+        
         ctrlE.iniciarEnfermedad();
         ctrlA.iniciarAlimento();
+        ctrlM.iniciarMedicamento();
+        ctrlI.iniciarInsumos();
+        
         vista.setVisible(true);
         
         
