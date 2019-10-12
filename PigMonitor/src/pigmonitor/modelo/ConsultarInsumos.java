@@ -21,7 +21,7 @@ public class ConsultarInsumos extends Conexion{
         PreparedStatement ps =null;
         Connection con = getConexion();
         
-        String sql = "INSERT INTO Insumos (codigoInsumos, nombreInsumos, precio) VALUES(?,?,?)";
+        String sql = "INSERT INTO Insumos (codigoInsumos, nombreInsumo, precio) VALUES(?,?,?)";
         
         try{
             
