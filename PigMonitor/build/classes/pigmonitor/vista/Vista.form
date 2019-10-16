@@ -55,115 +55,103 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                              <Component id="guardarLoteButton" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Component id="limpiarLoteButton" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="numHembrasTextField" min="-2" pref="101" max="-2" attributes="0"/>
-                                          <Group type="102" attributes="0">
-                                              <Component id="numLoteLabel" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="187" pref="187" max="-2" attributes="0"/>
-                                              <Component id="codigoLoteTextField" min="-2" pref="101" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="numMachosTextField" alignment="1" min="-2" pref="101" max="-2" attributes="0"/>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <Group type="103" groupAlignment="1" attributes="0">
-                                                  <Component id="modificarLoteButton" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="pesoLoteLabel" min="-2" max="-2" attributes="0"/>
-                                              </Group>
-                                              <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="eliminarLoteButton" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="pesoLoteTextField" min="-2" pref="101" max="-2" attributes="0"/>
-                                              </Group>
-                                          </Group>
-                                      </Group>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="268" pref="268" max="-2" attributes="0"/>
-                                      <Component id="loteLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
-                                      <Component id="imagenPig" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="numHembrasLabel" min="-2" pref="198" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" attributes="0">
-                                      <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                                      <Component id="numMachosLabel" min="-2" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                              <EmptySpace pref="35" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="buscarLoteButton" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
-                                  <Component id="idLoteTextField" alignment="1" min="-2" pref="70" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="380" pref="380" max="-2" attributes="0"/>
+                      <Component id="imagenPig" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="268" pref="268" max="-2" attributes="0"/>
+                      <Component id="loteLabel" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
+                      <Component id="numLoteLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="141" pref="141" max="-2" attributes="0"/>
+                      <Component id="codigoLoteTextField" min="-2" pref="101" max="-2" attributes="0"/>
+                      <EmptySpace min="100" pref="100" max="-2" attributes="0"/>
+                      <Component id="buscarLoteButton" min="-2" pref="70" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
+                      <Component id="numHembrasLabel" min="-2" pref="150" max="-2" attributes="0"/>
+                      <EmptySpace min="120" pref="120" max="-2" attributes="0"/>
+                      <Component id="numHembrasTextField" min="-2" pref="100" max="-2" attributes="0"/>
+                      <EmptySpace min="101" pref="101" max="-2" attributes="0"/>
+                      <Component id="idLoteTextField" min="-2" pref="70" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
+                      <Component id="numMachosLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="128" pref="128" max="-2" attributes="0"/>
+                      <Component id="numMachosTextField" min="-2" pref="101" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
+                      <Component id="pesoLoteLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="108" pref="108" max="-2" attributes="0"/>
+                      <Component id="pesoLoteTextField" min="-2" pref="101" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
+                      <Component id="guardarLoteButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="89" pref="89" max="-2" attributes="0"/>
+                      <Component id="modificarLoteButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="85" pref="85" max="-2" attributes="0"/>
+                      <Component id="eliminarLoteButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="81" pref="81" max="-2" attributes="0"/>
+                      <Component id="limpiarLoteButton" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-                              <Component id="loteLabel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="imagenPig" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="imagenPig" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+                      <Component id="loteLabel" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="42" pref="42" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                              <EmptySpace min="13" pref="13" max="-2" attributes="0"/>
                               <Component id="numLoteLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="codigoLoteTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="buscarLoteButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="numHembrasLabel" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="numHembrasTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="idLoteTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                              <Component id="codigoLoteTextField" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="buscarLoteButton" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="22" pref="22" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="idLoteTextField" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="numHembrasLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="numHembrasTextField" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                               <Component id="numMachosLabel" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Component id="numMachosTextField" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="pesoLoteLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="pesoLoteTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="26" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="pesoLoteLabel" min="-2" max="-2" attributes="0"/>
+                          <Component id="pesoLoteTextField" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="limpiarLoteButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="eliminarLoteButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="modificarLoteButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="guardarLoteButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="60" pref="60" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="guardarLoteButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="modificarLoteButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="eliminarLoteButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="limpiarLoteButton" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
