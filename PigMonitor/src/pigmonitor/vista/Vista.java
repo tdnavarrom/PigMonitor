@@ -53,6 +53,7 @@ public class Vista extends javax.swing.JFrame {
         limpiarLoteButton = new javax.swing.JButton();
         idLoteTextField = new javax.swing.JTextField();
         imagenPig = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         enfermedadPanel = new javax.swing.JPanel();
         enfermedadLabel = new javax.swing.JLabel();
         codigoEnfermedadLabel = new javax.swing.JLabel();
@@ -68,6 +69,7 @@ public class Vista extends javax.swing.JFrame {
         limpiarEnfermedadButton = new javax.swing.JButton();
         buscarEnfermedadButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         alimentoPanel = new javax.swing.JPanel();
         alimentoLabel = new javax.swing.JLabel();
         idAlimentoLabel = new javax.swing.JLabel();
@@ -85,6 +87,7 @@ public class Vista extends javax.swing.JFrame {
         eliminarAlimentoButton = new javax.swing.JButton();
         limpiarAlimentoButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         insumoPanel = new javax.swing.JPanel();
         insumosLabel = new javax.swing.JLabel();
         codigoInsumoLabel = new javax.swing.JLabel();
@@ -100,6 +103,7 @@ public class Vista extends javax.swing.JFrame {
         limpiarInsumosButton = new javax.swing.JButton();
         guardarInsumoButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         medicamentoPanel = new javax.swing.JPanel();
         medicamentoLabel = new javax.swing.JLabel();
         codigoMedicamentoLabel = new javax.swing.JLabel();
@@ -117,30 +121,42 @@ public class Vista extends javax.swing.JFrame {
         modificarMedicamentoButton = new javax.swing.JButton();
         eliminarMedicamentoButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lotePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         loteLabel.setText("Entrada de Datos Lote");
+        lotePanel.add(loteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(268, 11, -1, -1));
+        lotePanel.add(pesoLoteTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 101, -1));
 
         pesoLoteLabel.setText("Ingrese el Peso Promedio del Lote");
+        lotePanel.add(pesoLoteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, -1));
 
         numMachosTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numMachosTextFieldActionPerformed(evt);
             }
         });
+        lotePanel.add(numMachosTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 101, -1));
 
         numMachosLabel.setText("Ingrese el Numero de Machos");
+        lotePanel.add(numMachosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, -1));
 
         numHembrasTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numHembrasTextFieldActionPerformed(evt);
             }
         });
+        lotePanel.add(numHembrasTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 100, -1));
 
         numHembrasLabel.setText("Ingrese el Numero de Hembras");
+        lotePanel.add(numHembrasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 150, -1));
+        lotePanel.add(codigoLoteTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 101, -1));
 
         numLoteLabel.setText("Ingrese el Numero del Lote");
+        lotePanel.add(numLoteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
 
         buscarLoteButton.setText("Buscar");
         buscarLoteButton.addActionListener(new java.awt.event.ActionListener() {
@@ -148,121 +164,56 @@ public class Vista extends javax.swing.JFrame {
                 buscarLoteButtonActionPerformed(evt);
             }
         });
+        lotePanel.add(buscarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 67, 70, -1));
 
         guardarLoteButton.setText("Guardar");
+        lotePanel.add(guardarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
 
         modificarLoteButton.setText("Modificar");
+        lotePanel.add(modificarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
 
         eliminarLoteButton.setText("Eliminar");
+        lotePanel.add(eliminarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, -1, -1));
 
         limpiarLoteButton.setText("Limpiar");
+        lotePanel.add(limpiarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 290, -1, -1));
 
         idLoteTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idLoteTextFieldActionPerformed(evt);
             }
         });
+        lotePanel.add(idLoteTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 116, 70, -1));
+        lotePanel.add(imagenPig, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 0, -1, -1));
 
-        javax.swing.GroupLayout lotePanelLayout = new javax.swing.GroupLayout(lotePanel);
-        lotePanel.setLayout(lotePanelLayout);
-        lotePanelLayout.setHorizontalGroup(
-            lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lotePanelLayout.createSequentialGroup()
-                .addGap(380, 380, 380)
-                .addComponent(imagenPig))
-            .addGroup(lotePanelLayout.createSequentialGroup()
-                .addGap(268, 268, 268)
-                .addComponent(loteLabel))
-            .addGroup(lotePanelLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(numLoteLabel)
-                .addGap(141, 141, 141)
-                .addComponent(codigoLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addComponent(buscarLoteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(lotePanelLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(numHembrasLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(120, 120, 120)
-                .addComponent(numHembrasTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(101, 101, 101)
-                .addComponent(idLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(lotePanelLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(numMachosLabel)
-                .addGap(128, 128, 128)
-                .addComponent(numMachosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(lotePanelLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(pesoLoteLabel)
-                .addGap(108, 108, 108)
-                .addComponent(pesoLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(lotePanelLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(guardarLoteButton)
-                .addGap(89, 89, 89)
-                .addComponent(modificarLoteButton)
-                .addGap(85, 85, 85)
-                .addComponent(eliminarLoteButton)
-                .addGap(81, 81, 81)
-                .addComponent(limpiarLoteButton))
-        );
-        lotePanelLayout.setVerticalGroup(
-            lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(lotePanelLayout.createSequentialGroup()
-                .addComponent(imagenPig)
-                .addGap(11, 11, 11)
-                .addComponent(loteLabel)
-                .addGap(42, 42, 42)
-                .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(lotePanelLayout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(numLoteLabel))
-                    .addGroup(lotePanelLayout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(codigoLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(buscarLoteButton))
-                .addGap(22, 22, 22)
-                .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(idLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(lotePanelLayout.createSequentialGroup()
-                        .addGap(4, 4, 4)
-                        .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(numHembrasLabel)
-                            .addComponent(numHembrasTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(20, 20, 20)
-                .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(lotePanelLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(numMachosLabel))
-                    .addComponent(numMachosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pesoLoteLabel)
-                    .addComponent(pesoLoteTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60)
-                .addGroup(lotePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(guardarLoteButton)
-                    .addComponent(modificarLoteButton)
-                    .addComponent(eliminarLoteButton)
-                    .addComponent(limpiarLoteButton)))
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
+        lotePanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
 
         jTabbedPane1.addTab("Lote", lotePanel);
 
+        enfermedadPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         enfermedadLabel.setText("Entrada de Datos de Enfermedad");
+        enfermedadPanel.add(enfermedadLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 21, -1, -1));
 
         codigoEnfermedadLabel.setText("Ingrese el Numero de la Enfermedad");
+        enfermedadPanel.add(codigoEnfermedadLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 153, -1, -1));
 
         nombreEnfermedadLabel.setText("Ingrese el Nombre de la Enfermedad");
+        enfermedadPanel.add(nombreEnfermedadLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 194, -1, -1));
 
         numCerdosAfectLabel.setText("Ingrese el Numero de Cerdos Afectados");
+        enfermedadPanel.add(numCerdosAfectLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 244, -1, -1));
+        enfermedadPanel.add(idEnfermedadTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 194, 65, -1));
 
         codigoEnfermedadTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 codigoEnfermedadTextFieldActionPerformed(evt);
             }
         });
+        enfermedadPanel.add(codigoEnfermedadTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 90, -1));
+        enfermedadPanel.add(nombreEnfermedadTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 194, 90, -1));
+        enfermedadPanel.add(numCerdosAfectTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 244, 90, -1));
 
         guardarEnfermedadButton.setText("Guardar");
         guardarEnfermedadButton.addActionListener(new java.awt.event.ActionListener() {
@@ -270,6 +221,7 @@ public class Vista extends javax.swing.JFrame {
                 guardarEnfermedadButtonActionPerformed(evt);
             }
         });
+        enfermedadPanel.add(guardarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 322, -1, -1));
 
         modificarEnfermedadButton.setText("Modificar");
         modificarEnfermedadButton.addActionListener(new java.awt.event.ActionListener() {
@@ -277,6 +229,7 @@ public class Vista extends javax.swing.JFrame {
                 modificarEnfermedadButtonActionPerformed(evt);
             }
         });
+        enfermedadPanel.add(modificarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 322, -1, -1));
 
         eliminarEnfermedadButton.setText("Eliminar");
         eliminarEnfermedadButton.addActionListener(new java.awt.event.ActionListener() {
@@ -284,113 +237,58 @@ public class Vista extends javax.swing.JFrame {
                 eliminarEnfermedadButtonActionPerformed(evt);
             }
         });
+        enfermedadPanel.add(eliminarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 322, -1, -1));
 
         limpiarEnfermedadButton.setText("Limpiar");
+        enfermedadPanel.add(limpiarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(557, 322, -1, -1));
 
         buscarEnfermedadButton.setText("Buscar");
+        enfermedadPanel.add(buscarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 149, -1, -1));
+        enfermedadPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 0, -1, -1));
 
-        javax.swing.GroupLayout enfermedadPanelLayout = new javax.swing.GroupLayout(enfermedadPanel);
-        enfermedadPanel.setLayout(enfermedadPanelLayout);
-        enfermedadPanelLayout.setHorizontalGroup(
-            enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(enfermedadPanelLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nombreEnfermedadLabel)
-                    .addComponent(codigoEnfermedadLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 264, Short.MAX_VALUE)
-                .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(buscarEnfermedadButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(idEnfermedadTextField))
-                .addGap(31, 31, 31))
-            .addGroup(enfermedadPanelLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(guardarEnfermedadButton)
-                .addGap(45, 45, 45)
-                .addComponent(modificarEnfermedadButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(limpiarEnfermedadButton)
-                .addGap(43, 43, 43))
-            .addGroup(enfermedadPanelLayout.createSequentialGroup()
-                .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(enfermedadPanelLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(eliminarEnfermedadButton)
-                            .addGroup(enfermedadPanelLayout.createSequentialGroup()
-                                .addComponent(numCerdosAfectLabel)
-                                .addGap(48, 48, 48)
-                                .addComponent(numCerdosAfectTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(nombreEnfermedadTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(codigoEnfermedadTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(enfermedadPanelLayout.createSequentialGroup()
-                        .addGap(236, 236, 236)
-                        .addComponent(enfermedadLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1)))
-                .addContainerGap(169, Short.MAX_VALUE))
-        );
-        enfermedadPanelLayout.setVerticalGroup(
-            enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(enfermedadPanelLayout.createSequentialGroup()
-                .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(enfermedadPanelLayout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(enfermedadLabel)))
-                .addGap(71, 71, 71)
-                .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(codigoEnfermedadLabel)
-                    .addComponent(codigoEnfermedadTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buscarEnfermedadButton))
-                .addGap(22, 22, 22)
-                .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nombreEnfermedadLabel)
-                    .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(nombreEnfermedadTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(idEnfermedadTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(30, 30, 30)
-                .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(numCerdosAfectLabel)
-                    .addComponent(numCerdosAfectTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(58, 58, 58)
-                .addGroup(enfermedadPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(guardarEnfermedadButton)
-                    .addComponent(modificarEnfermedadButton)
-                    .addComponent(eliminarEnfermedadButton)
-                    .addComponent(limpiarEnfermedadButton))
-                .addContainerGap(41, Short.MAX_VALUE))
-        );
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
+        enfermedadPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
 
         jTabbedPane1.addTab("Enfermedad", enfermedadPanel);
 
+        alimentoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         alimentoLabel.setText("Entrada de Datos de Alimentos");
+        alimentoPanel.add(alimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 37, -1, -1));
 
         idAlimentoLabel.setText("Ingrese el Numero de Alimento");
+        alimentoPanel.add(idAlimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 113, -1, -1));
 
         nombreAlimentoLabel.setText("Ingrese el Nombre del alimento ");
+        alimentoPanel.add(nombreAlimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 163, -1, -1));
 
         numBultosLabel.setText("Ingrese el Numero de Bultos");
+        alimentoPanel.add(numBultosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
 
         precioAlimentoLabel.setText("Ingrese el Precio Total");
+        alimentoPanel.add(precioAlimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
 
         codigoAlimentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 codigoAlimentoTextFieldActionPerformed(evt);
             }
         });
+        alimentoPanel.add(codigoAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 114, 90, -1));
 
         nombreAlimentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreAlimentoTextFieldActionPerformed(evt);
             }
         });
+        alimentoPanel.add(nombreAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 163, 90, -1));
+        alimentoPanel.add(numBultosTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 207, 90, -1));
 
         precioAlimentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 precioAlimentoTextFieldActionPerformed(evt);
             }
         });
+        alimentoPanel.add(precioAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 257, 90, -1));
 
         buscarAlimentoButton.setText("Buscar");
         buscarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -398,6 +296,8 @@ public class Vista extends javax.swing.JFrame {
                 buscarAlimentoButtonActionPerformed(evt);
             }
         });
+        alimentoPanel.add(buscarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(467, 113, 80, -1));
+        alimentoPanel.add(idAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(467, 163, 80, -1));
 
         guardarAlimentoButton.setText("Guardar");
         guardarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -405,6 +305,7 @@ public class Vista extends javax.swing.JFrame {
                 guardarAlimentoButtonActionPerformed(evt);
             }
         });
+        alimentoPanel.add(guardarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, -1, -1));
 
         modificarAlimentoButton.setText("Modificar");
         modificarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -412,6 +313,7 @@ public class Vista extends javax.swing.JFrame {
                 modificarAlimentoButtonActionPerformed(evt);
             }
         });
+        alimentoPanel.add(modificarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, -1, -1));
 
         eliminarAlimentoButton.setText("Eliminar");
         eliminarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -419,6 +321,7 @@ public class Vista extends javax.swing.JFrame {
                 eliminarAlimentoButtonActionPerformed(evt);
             }
         });
+        alimentoPanel.add(eliminarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, -1, -1));
 
         limpiarAlimentoButton.setText("Limpiar");
         limpiarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -426,87 +329,11 @@ public class Vista extends javax.swing.JFrame {
                 limpiarAlimentoButtonActionPerformed(evt);
             }
         });
+        alimentoPanel.add(limpiarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, -1, -1));
+        alimentoPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 11, -1, -1));
 
-        javax.swing.GroupLayout alimentoPanelLayout = new javax.swing.GroupLayout(alimentoPanel);
-        alimentoPanel.setLayout(alimentoPanelLayout);
-        alimentoPanelLayout.setHorizontalGroup(
-            alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(alimentoPanelLayout.createSequentialGroup()
-                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(alimentoPanelLayout.createSequentialGroup()
-                        .addGap(100, 100, 100)
-                        .addComponent(guardarAlimentoButton)
-                        .addGap(49, 49, 49)
-                        .addComponent(modificarAlimentoButton)
-                        .addGap(55, 55, 55)
-                        .addComponent(eliminarAlimentoButton)
-                        .addGap(51, 51, 51)
-                        .addComponent(limpiarAlimentoButton))
-                    .addGroup(alimentoPanelLayout.createSequentialGroup()
-                        .addGap(244, 244, 244)
-                        .addComponent(alimentoLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2))
-                    .addGroup(alimentoPanelLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(idAlimentoLabel)
-                            .addComponent(nombreAlimentoLabel)
-                            .addComponent(numBultosLabel)
-                            .addComponent(precioAlimentoLabel))
-                        .addGap(78, 78, 78)
-                        .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(precioAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(numBultosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(alimentoPanelLayout.createSequentialGroup()
-                                    .addComponent(nombreAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(idAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(alimentoPanelLayout.createSequentialGroup()
-                                    .addComponent(codigoAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(98, 98, 98)
-                                    .addComponent(buscarAlimentoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addGap(118, 118, 118))
-        );
-        alimentoPanelLayout.setVerticalGroup(
-            alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(alimentoPanelLayout.createSequentialGroup()
-                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(alimentoPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2))
-                    .addGroup(alimentoPanelLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(alimentoLabel)))
-                .addGap(45, 45, 45)
-                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(idAlimentoLabel)
-                    .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(codigoAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(buscarAlimentoButton)))
-                .addGap(27, 27, 27)
-                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nombreAlimentoLabel)
-                    .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(idAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(nombreAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(24, 24, 24)
-                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(numBultosLabel)
-                    .addComponent(numBultosTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(precioAlimentoLabel)
-                    .addComponent(precioAlimentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(43, 43, 43)
-                .addGroup(alimentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(guardarAlimentoButton)
-                    .addComponent(modificarAlimentoButton)
-                    .addComponent(eliminarAlimentoButton)
-                    .addComponent(limpiarAlimentoButton))
-                .addContainerGap())
-        );
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
+        alimentoPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
 
         jTabbedPane1.addTab("Alimento", alimentoPanel);
 
@@ -549,37 +376,53 @@ public class Vista extends javax.swing.JFrame {
         insumoPanel.add(guardarInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
         insumoPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, -1, -1));
 
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
+        insumoPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
+
         jTabbedPane1.addTab("Insumos", insumoPanel);
 
+        medicamentoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         medicamentoLabel.setText("Entrada de Datos de Medicamentos");
+        medicamentoPanel.add(medicamentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 31, -1, -1));
 
         codigoMedicamentoLabel.setText("Codigo de Medicamento");
+        medicamentoPanel.add(codigoMedicamentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 81, -1, -1));
 
         nombreMedicamentoLabel.setText("Nombre de Medicamento ");
+        medicamentoPanel.add(nombreMedicamentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 129, -1, -1));
 
         numeroExistenciasLabel.setText("Numero de Existencias ");
+        medicamentoPanel.add(numeroExistenciasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 169, -1, -1));
 
         precioMedicamentoLabel.setText("Precio por Unidad");
+        medicamentoPanel.add(precioMedicamentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 216, -1, -1));
 
         codigoMedicamentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 codigoMedicamentoTextFieldActionPerformed(evt);
             }
         });
+        medicamentoPanel.add(codigoMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 82, 110, -1));
 
         nombreMedicamentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreMedicamentoTextFieldActionPerformed(evt);
             }
         });
+        medicamentoPanel.add(nombreMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 129, 110, -1));
+        medicamentoPanel.add(numeroExistenciasTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 167, 110, -1));
 
         precioMedicamentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 precioMedicamentoTextFieldActionPerformed(evt);
             }
         });
+        medicamentoPanel.add(precioMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 213, 110, -1));
+        medicamentoPanel.add(idMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(481, 129, 65, -1));
 
         buscarMedicamentoButton.setText("Buscar");
+        medicamentoPanel.add(buscarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(481, 81, -1, -1));
 
         limpiarMedicamentoButton.setText("Limpiar");
         limpiarMedicamentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -587,6 +430,7 @@ public class Vista extends javax.swing.JFrame {
                 limpiarMedicamentoButtonActionPerformed(evt);
             }
         });
+        medicamentoPanel.add(limpiarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 317, -1, -1));
 
         guardarMedicamentoButton.setText("Guardar");
         guardarMedicamentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -594,6 +438,7 @@ public class Vista extends javax.swing.JFrame {
                 guardarMedicamentoButtonActionPerformed(evt);
             }
         });
+        medicamentoPanel.add(guardarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 317, -1, -1));
 
         modificarMedicamentoButton.setText("Modificar");
         modificarMedicamentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -601,6 +446,7 @@ public class Vista extends javax.swing.JFrame {
                 modificarMedicamentoButtonActionPerformed(evt);
             }
         });
+        medicamentoPanel.add(modificarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 317, -1, -1));
 
         eliminarMedicamentoButton.setText("Eliminar");
         eliminarMedicamentoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -608,95 +454,11 @@ public class Vista extends javax.swing.JFrame {
                 eliminarMedicamentoButtonActionPerformed(evt);
             }
         });
+        medicamentoPanel.add(eliminarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 317, -1, -1));
+        medicamentoPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 11, -1, -1));
 
-        javax.swing.GroupLayout medicamentoPanelLayout = new javax.swing.GroupLayout(medicamentoPanel);
-        medicamentoPanel.setLayout(medicamentoPanelLayout);
-        medicamentoPanelLayout.setHorizontalGroup(
-            medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(medicamentoPanelLayout.createSequentialGroup()
-                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(guardarMedicamentoButton)
-                        .addGap(79, 79, 79)
-                        .addComponent(modificarMedicamentoButton)
-                        .addGap(85, 85, 85)
-                        .addComponent(eliminarMedicamentoButton)
-                        .addGap(91, 91, 91)
-                        .addComponent(limpiarMedicamentoButton))
-                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
-                        .addGap(216, 216, 216)
-                        .addComponent(medicamentoLabel)
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel4))
-                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(medicamentoPanelLayout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(codigoMedicamentoLabel)
-                                .addGap(56, 56, 56)
-                                .addComponent(codigoMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(medicamentoPanelLayout.createSequentialGroup()
-                                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(nombreMedicamentoLabel)
-                                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
-                                        .addComponent(numeroExistenciasLabel))
-                                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
-                                        .addGap(40, 40, 40)
-                                        .addComponent(precioMedicamentoLabel)))
-                                .addGap(59, 59, 59)
-                                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(precioMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(numeroExistenciasTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(nombreMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(108, 108, 108)
-                        .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(buscarMedicamentoButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(idMedicamentoTextField))))
-                .addGap(87, 87, 87))
-        );
-        medicamentoPanelLayout.setVerticalGroup(
-            medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(medicamentoPanelLayout.createSequentialGroup()
-                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel4))
-                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(medicamentoLabel)))
-                .addGap(36, 36, 36)
-                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(codigoMedicamentoLabel)
-                    .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(codigoMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(buscarMedicamentoButton)))
-                .addGap(25, 25, 25)
-                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nombreMedicamentoLabel)
-                    .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(nombreMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(idMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(numeroExistenciasLabel))
-                    .addGroup(medicamentoPanelLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(numeroExistenciasTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(26, 26, 26)
-                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(precioMedicamentoLabel)
-                    .addComponent(precioMedicamentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(84, 84, 84)
-                .addGroup(medicamentoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(guardarMedicamentoButton)
-                    .addComponent(modificarMedicamentoButton)
-                    .addComponent(eliminarMedicamentoButton)
-                    .addComponent(limpiarMedicamentoButton)))
-        );
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
+        medicamentoPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
 
         jTabbedPane1.addTab("Medicamento", medicamentoPanel);
 
@@ -892,6 +654,11 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JTabbedPane jTabbedPane1;
     public javax.swing.JButton limpiarAlimentoButton;
     public javax.swing.JButton limpiarEnfermedadButton;

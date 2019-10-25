@@ -28,48 +28,48 @@ public class Informes extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        loteCheckBox = new javax.swing.JCheckBox();
+        alimentoCheckBox = new javax.swing.JCheckBox();
+        enfermedadCheckBox = new javax.swing.JCheckBox();
+        medicamentoCheckBox = new javax.swing.JCheckBox();
+        insumosCheckBox = new javax.swing.JCheckBox();
+        informesLabel = new javax.swing.JLabel();
+        generarButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jCheckBox1.setText("Lote");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+        loteCheckBox.setText("Lote");
+        loteCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox1ActionPerformed(evt);
+                loteCheckBoxActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, -1, -1));
+        jPanel1.add(loteCheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, -1, -1));
 
-        jCheckBox3.setText("Alimento");
-        jPanel1.add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
+        alimentoCheckBox.setText("Alimento");
+        jPanel1.add(alimentoCheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
 
-        jCheckBox2.setText("Enfermedad");
-        jPanel1.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
+        enfermedadCheckBox.setText("Enfermedad");
+        jPanel1.add(enfermedadCheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
 
-        jCheckBox4.setText("Medicamento");
-        jPanel1.add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
+        medicamentoCheckBox.setText("Medicamento");
+        jPanel1.add(medicamentoCheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
 
-        jCheckBox5.setText("Insumos");
-        jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
+        insumosCheckBox.setText("Insumos");
+        insumosCheckBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCheckBox5ActionPerformed(evt);
+                insumosCheckBoxActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
+        jPanel1.add(insumosCheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
 
-        jLabel1.setText("Informes");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, -1));
+        informesLabel.setText("Informes");
+        jPanel1.add(informesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, -1));
 
-        jButton1.setText("Generar Informe");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, -1));
+        generarButton.setText("Generar Informe");
+        jPanel1.add(generarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -85,13 +85,13 @@ public class Informes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jCheckBox5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox5ActionPerformed
+    private void insumosCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insumosCheckBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox5ActionPerformed
+    }//GEN-LAST:event_insumosCheckBoxActionPerformed
 
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+    private void loteCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loteCheckBoxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBox1ActionPerformed
+    }//GEN-LAST:event_loteCheckBoxActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,13 +129,13 @@ public class Informes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JCheckBox alimentoCheckBox;
+    private javax.swing.JCheckBox enfermedadCheckBox;
+    private javax.swing.JButton generarButton;
+    private javax.swing.JLabel informesLabel;
+    private javax.swing.JCheckBox insumosCheckBox;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JCheckBox loteCheckBox;
+    private javax.swing.JCheckBox medicamentoCheckBox;
     // End of variables declaration//GEN-END:variables
 }
