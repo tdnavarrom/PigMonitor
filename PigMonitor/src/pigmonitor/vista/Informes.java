@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package pigmonitor.vista;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import pigmonitor.reportes.AlimentosCSV;
 
 /**
  *
@@ -69,6 +72,11 @@ public class Informes extends javax.swing.JFrame {
         jPanel1.add(informesLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, -1, -1));
 
         generarButton.setText("Generar Informe");
+        generarButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generarButtonActionPerformed(evt);
+            }
+        });
         jPanel1.add(generarButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -92,6 +100,18 @@ public class Informes extends javax.swing.JFrame {
     private void loteCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loteCheckBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_loteCheckBoxActionPerformed
+
+    private void generarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarButtonActionPerformed
+        // TODO add your handling code here:
+        
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
+        LocalDateTime now = LocalDateTime.now();  
+        
+        if(alimentoCheckBox.isSelected()){
+            AlimentosCSV foodcsv = new AlimentosCSV();
+            foodcsv.crearCsv(now.toString());
+        }
+    }//GEN-LAST:event_generarButtonActionPerformed
 
     /**
      * @param args the command line arguments

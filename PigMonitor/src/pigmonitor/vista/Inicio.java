@@ -90,7 +90,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void informesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_informesButtonActionPerformed
         // TODO add your handling code here:
-        new Vista().setVisible(true);
+        new Informes().setVisible(true);
     }//GEN-LAST:event_informesButtonActionPerformed
 
     /**

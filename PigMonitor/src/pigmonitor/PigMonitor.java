@@ -18,7 +18,8 @@ import pigmonitor.control.ControlInsumos;
 import pigmonitor.modelo.ConsultarInsumos;
 import pigmonitor.modelo.Insumos;
 import pigmonitor.vista.Vista;
-
+import pigmonitor.vista.Inicio;
+import pigmonitor.vista.Informes;
 /**
  *
  * @author pcorream
@@ -43,6 +44,8 @@ public class PigMonitor {
         ConsultarInsumos insumoC = new ConsultarInsumos();
         
         Vista vista = new Vista();
+        Inicio inicio = new Inicio();
+        Informes informes = new Informes();
         
         ControlEnfermedad ctrlE = new ControlEnfermedad(enfe, enfeC, vista);
         ControlAlimento ctrlA = new ControlAlimento(food, foodC, vista);
@@ -53,8 +56,10 @@ public class PigMonitor {
         ctrlA.iniciarAlimento();
         ctrlM.iniciarMedicamento();
         ctrlI.iniciarInsumos();
+
         
-        vista.setVisible(true);
+        
+        inicio.setVisible(true);
         
         
     }
