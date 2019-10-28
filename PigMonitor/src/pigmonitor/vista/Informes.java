@@ -7,6 +7,9 @@ package pigmonitor.vista;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import pigmonitor.reportes.AlimentosCSV;
+import pigmonitor.reportes.EnfermedadesCSV;
+import pigmonitor.reportes.InsumosCSV;
+import pigmonitor.reportes.MedicamentosCSV;
 
 /**
  *
@@ -44,11 +47,7 @@ public class Informes extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         loteCheckBox.setText("Lote");
-        loteCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loteCheckBoxActionPerformed(evt);
-            }
-        });
+
         jPanel1.add(loteCheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, -1, -1));
 
         alimentoCheckBox.setText("Alimento");
@@ -61,11 +60,6 @@ public class Informes extends javax.swing.JFrame {
         jPanel1.add(medicamentoCheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
 
         insumosCheckBox.setText("Insumos");
-        insumosCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                insumosCheckBoxActionPerformed(evt);
-            }
-        });
         jPanel1.add(insumosCheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
 
         informesLabel.setText("Informes");
@@ -93,14 +87,6 @@ public class Informes extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void insumosCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_insumosCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_insumosCheckBoxActionPerformed
-
-    private void loteCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loteCheckBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_loteCheckBoxActionPerformed
-
     private void generarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generarButtonActionPerformed
         // TODO add your handling code here:
         
@@ -110,6 +96,18 @@ public class Informes extends javax.swing.JFrame {
         if(alimentoCheckBox.isSelected()){
             AlimentosCSV foodcsv = new AlimentosCSV();
             foodcsv.crearCsv(now.toString());
+        }
+        if(medicamentoCheckBox.isSelected()){
+            MedicamentosCSV medcsv = new MedicamentosCSV();
+            medcsv.crearCsv(now.toString());
+        }
+        if(enfermedadCheckBox.isSelected()){
+            EnfermedadesCSV enfcsv = new EnfermedadesCSV();
+            enfcsv.crearCsv(now.toString());
+        }
+        if(insumosCheckBox.isSelected()){
+            InsumosCSV inscsv = new InsumosCSV();
+            inscsv.crearCsv(now.toString());
         }
     }//GEN-LAST:event_generarButtonActionPerformed
 
