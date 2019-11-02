@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pigmonitor.reportes;
+package pigmonitor.modelo.reportes;
 
 
 import java.io.File;
