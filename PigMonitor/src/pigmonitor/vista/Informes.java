@@ -6,10 +6,10 @@
 package pigmonitor.vista;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import pigmonitor.reportes.AlimentosCSV;
-import pigmonitor.reportes.EnfermedadesCSV;
-import pigmonitor.reportes.InsumosCSV;
-import pigmonitor.reportes.MedicamentosCSV;
+import pigmonitor.modelos.reportes.AlimentosCSV;
+import pigmonitor.modelos.reportes.EnfermedadesCSV;
+import pigmonitor.modelos.reportes.InsumosCSV;
+import pigmonitor.modelos.reportes.MedicamentosCSV;
 
 /**
  *
