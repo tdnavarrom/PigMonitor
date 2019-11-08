@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -21,7 +23,11 @@ public class ConsultarInsumos extends Conexion{
         PreparedStatement ps =null;
         Connection con = getConexion();
         
-        String sql = "INSERT INTO Insumos (codigoInsumos, nombreInsumo, precio) VALUES(?,?,?)";
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());   
+        String new_Date = format.format(date);
+        
+        String sql = "INSERT INTO Insumos (codigoInsumos, nombreInsumo, precio, modificacionInsumos) VALUES(?,?,?,?)";
         
         try{
             
@@ -29,6 +35,7 @@ public class ConsultarInsumos extends Conexion{
             ps.setInt(1, insumo.getCodigoInsumos());
             ps.setString(2, insumo.getNombreInsumo());
             ps.setInt(3, insumo.getPrecio());
+            ps.setString(4, new_Date);
             ps.execute();
             return true;
             
@@ -48,7 +55,11 @@ public class ConsultarInsumos extends Conexion{
         PreparedStatement ps =null;
         Connection con = getConexion();
         
-        String sql = "UPDATE Insumos SET codigoInsumos=? ,nombreInsumo=?, precio=? WHERE idInsumos=?";
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());   
+        String new_Date = format.format(date);
+        
+        String sql = "UPDATE Insumos SET codigoInsumos=? ,nombreInsumo=?, precio=?, modificacionInsumos=? WHERE idInsumos=?";
         
         try{
             
@@ -56,7 +67,9 @@ public class ConsultarInsumos extends Conexion{
             ps.setInt(1, insumo.getCodigoInsumos());
             ps.setString(2, insumo.getNombreInsumo());
             ps.setInt(3, insumo.getPrecio());
-            ps.setInt(4, insumo.getIdInsumos());
+            ps.setString(4, new_Date);
+            ps.setInt(5, insumo.getIdInsumos());
+            
             ps.execute();
             return true;
             

@@ -22,16 +22,16 @@ public class Conexion {
     
  
     private final String base = "pigmonitor";
-    private final String username = "pcorream@pigmonitor-server";
-    private final String password = "pitufo2013#";
-    private final String url = "pigmonitor-server.mysql.database.azure.com";
+    private final String username = "root";
+    private final String password = "TomasDavid2001";
+    private final String url = "jdbc:mysql://localhost:3306/" + base+"?autoReconnect=true&useSSL=false";
     private Connection con = null;
     
     public Connection getConexion(){
-       
+       System.out.println("Hola");
        try{
            
-           Class.forName("com.mysql.cj.jdbc.Driver");
+           Class.forName("com.mysql.jdbc.Driver");
            con = (Connection) DriverManager.getConnection(this.url, this.username, this.password);
            
        }catch(SQLException e){

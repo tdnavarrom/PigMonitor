@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -20,7 +22,11 @@ public class ConsultarEnfermedad extends Conexion {
         PreparedStatement ps =null;
         Connection con = getConexion();
         
-        String sql = "INSERT INTO Enfermedad (codigoEnfermedad, nombreEnfermedad, cerdosAfectados) VALUES(?,?,?)";
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());   
+        String new_Date = format.format(date);
+        
+        String sql = "INSERT INTO Enfermedad (codigoEnfermedad, nombreEnfermedad, cerdosAfectados, modificacionEnfermedad) VALUES(?,?,?,?)";
         
         try{
             
@@ -28,6 +34,7 @@ public class ConsultarEnfermedad extends Conexion {
             ps.setString(1, enf.getCodigoEnfermedad());
             ps.setString(2, enf.getNombreEnfermedad());
             ps.setInt(3, enf.getCerdosAfectados());
+            ps.setString(4, new_Date);
             ps.execute();
             return true;
             
@@ -47,7 +54,11 @@ public class ConsultarEnfermedad extends Conexion {
         PreparedStatement ps =null;
         Connection con = getConexion();
         
-        String sql = "UPDATE Enfermedad SET codigoEnfermedad=? ,nombreEnfermedad=?, cerdosAfectados=? WHERE idEnfermedad=?";
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());   
+        String new_Date = format.format(date);
+        
+        String sql = "UPDATE Enfermedad SET codigoEnfermedad=? ,nombreEnfermedad=?, cerdosAfectados=?, modificacionEnfermedad=? WHERE idEnfermedad=?";
         
         try{
             
@@ -55,7 +66,8 @@ public class ConsultarEnfermedad extends Conexion {
             ps.setString(1, enf.getCodigoEnfermedad());
             ps.setString(2, enf.getNombreEnfermedad());
             ps.setInt(3, enf.getCerdosAfectados());
-            ps.setInt(4, enf.getIdEnfermedad());
+            ps.setString(4, new_Date);
+            ps.setInt(5, enf.getIdEnfermedad());
             ps.execute();
             return true;
             

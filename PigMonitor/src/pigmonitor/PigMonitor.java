@@ -59,7 +59,7 @@ public class PigMonitor {
 
         
         
-        vista.setVisible(true);
+        inicio.setVisible(true);
         
         
     }

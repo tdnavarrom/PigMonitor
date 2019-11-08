@@ -15,6 +15,7 @@ public class Medicamento {
     private String nombreMedicamento;
     private int numeroExistencias;
     private int precio;
+    private String modificacionMedicamento;
 
     /**
      * @return the idMedicamento
@@ -84,6 +85,20 @@ public class Medicamento {
      */
     public void setPrecio(int precio) {
         this.precio = precio;
+    }
+
+    /**
+     * @return the modificacionMedicamento
+     */
+    public String getModificacionMedicamento() {
+        return modificacionMedicamento;
+    }
+
+    /**
+     * @param modificacionMedicamento the modificacionMedicamento to set
+     */
+    public void setModificacionMedicamento(String modificacionMedicamento) {
+        this.modificacionMedicamento = modificacionMedicamento;
     }
 
 }

@@ -14,6 +14,7 @@ public class Insumos {
     private int codigoInsumos;
     private String nombreInsumo;
     private int precio;
+    private String modificacionInsumos;
 
     /**
      * @return the idInsumos
@@ -69,6 +70,20 @@ public class Insumos {
      */
     public void setPrecio(int precio) {
         this.precio = precio;
+    }
+
+    /**
+     * @return the modificacionInsumos
+     */
+    public String getModificacionInsumos() {
+        return modificacionInsumos;
+    }
+
+    /**
+     * @param modificacionInsumos the modificacionInsumos to set
+     */
+    public void setModificacionInsumos(String modificacionInsumos) {
+        this.modificacionInsumos = modificacionInsumos;
     }
     
     

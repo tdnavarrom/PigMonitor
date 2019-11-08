@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -21,7 +23,11 @@ public class ConsultarAlimento extends Conexion{
         PreparedStatement ps =null;
         Connection con = getConexion();
         
-        String sql = "INSERT INTO Alimento (codigoAlimento, nombreAlimento, numeroBultos, precio) VALUES(?,?,?,?)";
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());   
+        String new_Date = format.format(date);
+        
+        String sql = "INSERT INTO Alimento (codigoAlimento, nombreAlimento, numeroBultos, precio, modificacionAlimento) VALUES(?,?,?,?,?)";
         
         try{
             
@@ -30,6 +36,7 @@ public class ConsultarAlimento extends Conexion{
             ps.setString(2, food.getNombreAlimento());
             ps.setInt(3, food.getNumeroBultos());
             ps.setInt(4, food.getPrecio());
+            ps.setString(5, new_Date);
             ps.execute();
             return true;
             
@@ -49,7 +56,13 @@ public class ConsultarAlimento extends Conexion{
         PreparedStatement ps =null;
         Connection con = getConexion();
         
-        String sql = "UPDATE Alimento SET codigoAlimento=? ,nombreAlimento=?, numeroBultos=?, precio=? WHERE idAlimento=?";
+        
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());   
+        String new_Date = format.format(date);
+        
+        
+        String sql = "UPDATE Alimento SET codigoAlimento=? ,nombreAlimento=?, numeroBultos=?, precio=?, modificacionAlimento=? WHERE idAlimento=?";
         
         try{
             
@@ -58,7 +71,9 @@ public class ConsultarAlimento extends Conexion{
             ps.setString(2, food.getNombreAlimento());
             ps.setInt(3, food.getNumeroBultos());
             ps.setInt(4, food.getPrecio());
-            ps.setInt(5, food.getIdAlimento());
+            ps.setString(5, new_Date);
+            ps.setInt(6, food.getIdAlimento());
+            
             ps.execute();
             return true;
             

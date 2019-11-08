@@ -15,6 +15,7 @@ public class Alimento {
     private String nombreAlimento;
     private int numeroBultos;
     private int precio;
+    private String date; 
 
     /**
      * @return the idAlimento
@@ -84,6 +85,20 @@ public class Alimento {
      */
     public void setPrecio(int precio) {
         this.precio = precio;
+    }
+
+    /**
+     * @return the date
+     */
+    public String getDate() {
+        return date;
+    }
+
+    /**
+     * @param date the date to set
+     */
+    public void setDate(String date) {
+        this.date = date;
     }
     
     

@@ -10,6 +10,7 @@ public class Enfermedad {
     private String codigoEnfermedad;
     private String nombreEnfermedad;
     private int cerdosAfectados;
+    private String modificacionEnfermedad;
     
     
     public int getIdEnfermedad() {
@@ -44,6 +45,20 @@ public class Enfermedad {
 
     public void setCerdosAfectados(int cerdosAfectados) {
         this.cerdosAfectados = cerdosAfectados;
+    }
+
+    /**
+     * @return the modificacionEnfermedad
+     */
+    public String getModificacionEnfermedad() {
+        return modificacionEnfermedad;
+    }
+
+    /**
+     * @param modificacionEnfermedad the modificacionEnfermedad to set
+     */
+    public void setModificacionEnfermedad(String modificacionEnfermedad) {
+        this.modificacionEnfermedad = modificacionEnfermedad;
     }
     
 }

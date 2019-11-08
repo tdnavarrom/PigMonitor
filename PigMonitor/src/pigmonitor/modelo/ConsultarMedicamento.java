@@ -9,6 +9,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -19,7 +21,11 @@ public class ConsultarMedicamento extends Conexion{
         PreparedStatement ps =null;
         Connection con = getConexion();
         
-        String sql = "INSERT INTO Medicamento (codigoMedicamento, nombreMedicamento, numeroExistencias, precio) VALUES(?,?,?,?)";
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());   
+        String new_Date = format.format(date);
+        
+        String sql = "INSERT INTO Medicamento (codigoMedicamento, nombreMedicamento, numeroExistencias, precio, modificacionMedicamento) VALUES(?,?,?,?,?)";
         
         try{
             
@@ -28,6 +34,7 @@ public class ConsultarMedicamento extends Conexion{
             ps.setString(2, med.getNombreMedicamento());
             ps.setInt(3, med.getNumeroExistencias());
             ps.setInt(4, med.getPrecio());
+            ps.setString(5, new_Date);
             ps.execute();
             return true;
             
@@ -47,7 +54,11 @@ public class ConsultarMedicamento extends Conexion{
         PreparedStatement ps =null;
         Connection con = getConexion();
         
-        String sql = "UPDATE Medicamento SET codigoMedicamento=? ,nombreMedicamento=?, numeroExistencias=?, precio=? WHERE idMedicamento=?";
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date(System.currentTimeMillis());   
+        String new_Date = format.format(date);
+        
+        String sql = "UPDATE Medicamento SET codigoMedicamento=? ,nombreMedicamento=?, numeroExistencias=?, precio=?, modificacionMedicamento=? WHERE idMedicamento=?";
         
         try{
             
@@ -56,7 +67,8 @@ public class ConsultarMedicamento extends Conexion{
             ps.setString(2, med.getNombreMedicamento());
             ps.setInt(3, med.getNumeroExistencias());
             ps.setInt(4, med.getPrecio());
-            ps.setInt(5, med.getIdMedicamento());
+            ps.setString(5, new_Date);
+            ps.setInt(6, med.getIdMedicamento());
             ps.execute();
             return true;
             
