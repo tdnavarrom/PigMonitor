@@ -40,6 +40,8 @@ public class ConsultarLote extends Conexion{
             ps.setInt(7, lote.getAlimento_idAlimento());
             ps.setInt(8, lote.getMedicamento_idMedicamento());
             ps.execute();
+
+            
             return true;
             
         }catch(SQLException e){
