@@ -780,9 +780,9 @@ public class Vista extends javax.swing.JFrame {
     public javax.swing.JButton limpiarMedicamentoButton;
     public javax.swing.JButton loteEnfermedadButton;
     private javax.swing.JLabel loteEnfermedadLabel;
-    private javax.swing.JTextField loteEnfermedadTextField;
+    public javax.swing.JTextField loteEnfermedadTextField;
     public javax.swing.JButton loteInsumoButton;
-    private javax.swing.JTextField loteInsumosTextField;
+    public javax.swing.JTextField loteInsumosTextField;
     private javax.swing.JLabel loteLabel;
     private javax.swing.JPanel lotePanel;
     private javax.swing.JLabel medicamentoLabel;

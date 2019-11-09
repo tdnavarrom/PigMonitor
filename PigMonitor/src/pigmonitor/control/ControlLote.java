@@ -7,6 +7,7 @@ package pigmonitor.control;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import pigmonitor.modelo.ConsultarLote;
 import pigmonitor.modelo.Lote;
@@ -21,6 +22,8 @@ public class ControlLote implements ActionListener{
     private Lote lote;
     private ConsultarLote loteC;
     private Vista vista;  
+    public ArrayList<Integer> enfermedades_id = new ArrayList<>();
+    public ArrayList<Integer> insumos_id = new ArrayList<>();
     
     public ControlLote(Lote lote, ConsultarLote loteC, Vista vista ){
         this.lote = lote;
@@ -30,7 +33,9 @@ public class ControlLote implements ActionListener{
         this.vista.modificarLoteButton.addActionListener(this);
         this.vista.eliminarLoteButton.addActionListener(this);
         this.vista.buscarLoteButton.addActionListener(this);
-        this.vista.limpiarLoteButton.addActionListener(this);     
+        this.vista.limpiarLoteButton.addActionListener(this);    
+        this.vista.loteEnfermedadButton.addActionListener(this);
+        this.vista.loteInsumoButton.addActionListener(this);
     } 
     
     public void iniciarLote(){
@@ -48,8 +53,8 @@ public class ControlLote implements ActionListener{
             lote.setNumeroCerdos(Integer.parseInt(vista.numHembrasTextField.getText()) + Integer.parseInt(vista.numMachosTextField.getText()));
             lote.setAlimento_idAlimento(Integer.parseInt(vista.alimento_idAlimentoTextField.getText()));
             lote.setMedicamento_idMedicamento(Integer.parseInt(vista.medicamento_idMedicamentoTextField.getText()));
-
-            if(loteC.registrar(lote)){
+            
+            if(loteC.registrar(lote,enfermedades_id,insumos_id)){
                 JOptionPane.showMessageDialog(null, "Registro Exitoso");
                 limpiar();
             }else{
@@ -104,7 +109,18 @@ public class ControlLote implements ActionListener{
         }
         if(e.getSource() == vista.limpiarLoteButton){
             limpiar();
-        }    
+        } 
+        if(e.getSource() == vista.loteEnfermedadButton ){
+            enfermedades_id.add(Integer.parseInt(vista.loteEnfermedadTextField.getText()));
+            System.out.println(enfermedades_id);
+               
+            
+            
+        } 
+        if(e.getSource() == vista.loteInsumoButton){
+            insumos_id.add(Integer.parseInt(vista.loteInsumosTextField.getText()));
+            System.out.println(insumos_id);
+        }
     }
     public void limpiar(){
         vista.idLoteTextField.setText(null);

@@ -22,10 +22,9 @@ import java.util.logging.Logger;
  */
 public class ConsultarLote extends Conexion{
      
-    private ArrayList<Integer> enfermedades_id = new ArrayList<>();
-    private ArrayList<Integer> insumos_id = new ArrayList<>();
+
         
-    public boolean registrar(Lote lote){
+    public boolean registrar(Lote lote, ArrayList <Integer> enfermedades_id,ArrayList <Integer> insumos_id){
         PreparedStatement ps =null;
         Connection con = getConexion();
         
