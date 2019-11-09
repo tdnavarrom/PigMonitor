@@ -22,8 +22,6 @@ public class ControlLote implements ActionListener{
     private Lote lote;
     private ConsultarLote loteC;
     private Vista vista;  
-    public ArrayList<Integer> enfermedades_id = new ArrayList<>();
-    public ArrayList<Integer> insumos_id = new ArrayList<>();
     
     public ControlLote(Lote lote, ConsultarLote loteC, Vista vista ){
         this.lote = lote;
@@ -54,7 +52,7 @@ public class ControlLote implements ActionListener{
             lote.setAlimento_idAlimento(Integer.parseInt(vista.alimento_idAlimentoTextField.getText()));
             lote.setMedicamento_idMedicamento(Integer.parseInt(vista.medicamento_idMedicamentoTextField.getText()));
             
-            if(loteC.registrar(lote,enfermedades_id,insumos_id)){
+            if(loteC.registrar(lote)){
                 
                 JOptionPane.showMessageDialog(null, "Registro Exitoso");
                 limpiar();
@@ -115,14 +113,15 @@ public class ControlLote implements ActionListener{
             lote.setCodigoLote(Integer.parseInt(vista.codigoLoteTextField.getText()));
             int enfermedad_id = Integer.parseInt(vista.loteEnfermedadTextField.getText());
             loteC.insertarEnfermedades(enfermedad_id, lote);
-            System.out.println(enfermedades_id);                                       
+            System.out.println(enfermedad_id);  
+            vista.loteEnfermedadTextField.setText(null);
         } 
         if(e.getSource() == vista.loteInsumoButton){
             lote.setCodigoLote(Integer.parseInt(vista.codigoLoteTextField.getText()));
             int insumo_id = Integer.parseInt(vista.loteInsumosTextField.getText());
             loteC.insertarInsumos(insumo_id, lote);
+            System.out.println(insumo_id);
             
-            System.out.println(insumos_id);
         }
     }
     public void limpiar(){

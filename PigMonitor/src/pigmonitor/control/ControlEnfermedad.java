@@ -21,6 +21,7 @@ public class ControlEnfermedad implements ActionListener{
     private Enfermedad enfe;
     private ConsultarEnfermedad enfeC;
     private Vista vista;  
+    public String loteEnfermo;
     
     public ControlEnfermedad(Enfermedad enfe, ConsultarEnfermedad enfeC, Vista vista ){
         this.enfe = enfe;

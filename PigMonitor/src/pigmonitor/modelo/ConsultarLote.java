@@ -24,7 +24,7 @@ public class ConsultarLote extends Conexion{
      
 
         
-    public boolean registrar(Lote lote, ArrayList <Integer> enfermedades_id,ArrayList <Integer> insumos_id){
+    public boolean registrar(Lote lote){
         PreparedStatement ps =null;
         Connection con = getConexion();
         
