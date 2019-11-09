@@ -26,7 +26,7 @@ public class ConsultarLote extends Conexion{
         Date date = new Date(System.currentTimeMillis());   
         String new_Date = format.format(date);
         
-        String sql = "INSERT INTO Lote (codigoLote, fechaEntrada, numeroCerdos, PesoPromedio, numMachos, numHembras, Alimento_idAlimento, Medicamento_idMedicamento VALUES(?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO Lote (codigoLote, fechaEntrada, numeroCerdos, PesoPromedio, numMachos, numHembras, Alimento_idAlimento, Medicamento_idMedicamento) VALUES(?,?,?,?,?,?,?,?)";
         
         try{
             

@@ -54,6 +54,10 @@ public class Vista extends javax.swing.JFrame {
         idLoteTextField = new javax.swing.JTextField();
         imagenPig = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        Alimento_idAlimento = new javax.swing.JLabel();
+        alimento_idAlimentoTextField = new javax.swing.JTextField();
+        medicamento_idMedicamentoTextField = new javax.swing.JTextField();
+        Medicamento_idMedicamento = new javax.swing.JLabel();
         enfermedadPanel = new javax.swing.JPanel();
         enfermedadLabel = new javax.swing.JLabel();
         codigoEnfermedadLabel = new javax.swing.JLabel();
@@ -142,7 +146,7 @@ public class Vista extends javax.swing.JFrame {
         lotePanel.add(numMachosTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 101, -1));
 
         numMachosLabel.setText("Ingrese el Numero de Machos");
-        lotePanel.add(numMachosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, -1, -1));
+        lotePanel.add(numMachosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 200, -1));
 
         numHembrasTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,11 +156,11 @@ public class Vista extends javax.swing.JFrame {
         lotePanel.add(numHembrasTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 100, -1));
 
         numHembrasLabel.setText("Ingrese el Numero de Hembras");
-        lotePanel.add(numHembrasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 150, -1));
+        lotePanel.add(numHembrasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 200, -1));
         lotePanel.add(codigoLoteTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 101, -1));
 
         numLoteLabel.setText("Ingrese el Numero del Lote");
-        lotePanel.add(numLoteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, -1, -1));
+        lotePanel.add(numLoteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 180, -1));
 
         buscarLoteButton.setText("Buscar");
         buscarLoteButton.addActionListener(new java.awt.event.ActionListener() {
@@ -167,16 +171,16 @@ public class Vista extends javax.swing.JFrame {
         lotePanel.add(buscarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 67, 70, -1));
 
         guardarLoteButton.setText("Guardar");
-        lotePanel.add(guardarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
+        lotePanel.add(guardarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, -1, -1));
 
         modificarLoteButton.setText("Modificar");
-        lotePanel.add(modificarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, -1, -1));
+        lotePanel.add(modificarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, -1, -1));
 
         eliminarLoteButton.setText("Eliminar");
-        lotePanel.add(eliminarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, -1, -1));
+        lotePanel.add(eliminarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, -1, -1));
 
         limpiarLoteButton.setText("Limpiar");
-        lotePanel.add(limpiarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 290, -1, -1));
+        lotePanel.add(limpiarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, -1, -1));
 
         idLoteTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -188,6 +192,26 @@ public class Vista extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
         lotePanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
+
+        Alimento_idAlimento.setText("Ingrese el Codigo del Alimento");
+        lotePanel.add(Alimento_idAlimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+
+        alimento_idAlimentoTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                alimento_idAlimentoTextFieldActionPerformed(evt);
+            }
+        });
+        lotePanel.add(alimento_idAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 101, -1));
+
+        medicamento_idMedicamentoTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                medicamento_idMedicamentoTextFieldActionPerformed(evt);
+            }
+        });
+        lotePanel.add(medicamento_idMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 101, -1));
+
+        Medicamento_idMedicamento.setText("Ingrese el Codigo del Medicamento");
+        lotePanel.add(Medicamento_idMedicamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
 
         jTabbedPane1.addTab("Lote", lotePanel);
 
@@ -467,13 +491,13 @@ public class Vista extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 704, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
@@ -577,6 +601,14 @@ public class Vista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_nombreMedicamentoTextFieldActionPerformed
 
+    private void alimento_idAlimentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_alimento_idAlimentoTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_alimento_idAlimentoTextFieldActionPerformed
+
+    private void medicamento_idMedicamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicamento_idMedicamentoTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_medicamento_idMedicamentoTextFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -614,8 +646,11 @@ public class Vista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JLabel Alimento_idAlimento;
+    public javax.swing.JLabel Medicamento_idMedicamento;
     private javax.swing.JLabel alimentoLabel;
     private javax.swing.JPanel alimentoPanel;
+    public javax.swing.JTextField alimento_idAlimentoTextField;
     public javax.swing.JButton buscarAlimentoButton;
     public javax.swing.JButton buscarEnfermedadButton;
     public javax.swing.JButton buscarInsumoButton;
@@ -669,6 +704,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JPanel lotePanel;
     private javax.swing.JLabel medicamentoLabel;
     private javax.swing.JPanel medicamentoPanel;
+    public javax.swing.JTextField medicamento_idMedicamentoTextField;
     public javax.swing.JButton modificarAlimentoButton;
     public javax.swing.JButton modificarEnfermedadButton;
     public javax.swing.JButton modificarInsumoButton;

@@ -45,6 +45,8 @@ import java.sql.SQLException;
                 sb.append(rs.getString("numeroExistencias"));
                 sb.append(",");
                 sb.append(rs.getString("precio"));
+                sb.append(",");
+                sb.append(rs.getString("modificacionMedicamento"));
                 sb.append("\r\n");
          }
 

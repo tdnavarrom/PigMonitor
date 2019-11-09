@@ -43,6 +43,8 @@ import java.sql.SQLException;
                 sb.append(rs.getString("nombreEnfermedad"));
                 sb.append(",");
                 sb.append(rs.getString("cerdosAfectados"));
+                sb.append(",");
+                sb.append(rs.getString("modificacionEnfermedad"));
                 sb.append("\r\n");
          }
 

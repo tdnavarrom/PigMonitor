@@ -43,6 +43,8 @@ import java.sql.SQLException;
                 sb.append(rs.getString("nombreInsumos"));
                 sb.append(",");
                 sb.append(rs.getString("precio"));
+                sb.append(",");
+                sb.append(rs.getString("modificacionInsumos"));
                 sb.append("\r\n");
          }
 

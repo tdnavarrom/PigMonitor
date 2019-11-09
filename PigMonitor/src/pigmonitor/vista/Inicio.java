@@ -5,6 +5,22 @@
  */
 package pigmonitor.vista;
 
+import pigmonitor.control.ControlAlimento;
+import pigmonitor.control.ControlEnfermedad;
+import pigmonitor.control.ControlInsumos;
+import pigmonitor.control.ControlLote;
+import pigmonitor.control.ControlMedicamento;
+import pigmonitor.modelo.Alimento;
+import pigmonitor.modelo.ConsultarAlimento;
+import pigmonitor.modelo.ConsultarEnfermedad;
+import pigmonitor.modelo.ConsultarInsumos;
+import pigmonitor.modelo.ConsultarLote;
+import pigmonitor.modelo.ConsultarMedicamento;
+import pigmonitor.modelo.Enfermedad;
+import pigmonitor.modelo.Insumos;
+import pigmonitor.modelo.Lote;
+import pigmonitor.modelo.Medicamento;
+
 /**
  *
  * @author Usuario
@@ -85,7 +101,37 @@ public class Inicio extends javax.swing.JFrame {
 
     private void actualizarButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarButtonActionPerformed
         // TODO add your handling code here:
-        new Vista().setVisible(true);
+        Enfermedad enfe = new Enfermedad(); 
+        ConsultarEnfermedad enfeC = new ConsultarEnfermedad();
+        
+        Alimento food = new Alimento();
+        ConsultarAlimento foodC = new ConsultarAlimento();
+        
+        Medicamento med = new Medicamento();
+        ConsultarMedicamento medC = new ConsultarMedicamento();
+
+        Insumos insumo = new Insumos();
+        ConsultarInsumos insumoC = new ConsultarInsumos();
+        
+        Lote lote = new Lote();
+        ConsultarLote loteC = new ConsultarLote();
+        
+        Vista vista = new Vista();
+        
+        ControlEnfermedad ctrlE = new ControlEnfermedad(enfe, enfeC, vista);
+        ControlAlimento ctrlA = new ControlAlimento(food, foodC, vista);
+        ControlMedicamento ctrlM = new ControlMedicamento(med, medC, vista);
+        ControlInsumos ctrlI = new ControlInsumos(insumo, insumoC, vista);
+        ControlLote ctrlL = new ControlLote(lote, loteC, vista);
+        
+        ctrlE.iniciarEnfermedad();
+        ctrlA.iniciarAlimento();
+        ctrlM.iniciarMedicamento();
+        ctrlI.iniciarInsumos();
+        ctrlL.iniciarLote();
+        
+        
+        vista.setVisible(true);
     }//GEN-LAST:event_actualizarButtonActionPerformed
 
     private void informesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_informesButtonActionPerformed

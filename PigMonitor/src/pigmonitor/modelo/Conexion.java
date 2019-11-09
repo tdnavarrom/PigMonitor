@@ -31,7 +31,7 @@ public class Conexion {
        System.out.println("Hola");
        try{
            
-           Class.forName("com.mysql.jdbc.Driver");
+           Class.forName("com.mysql.cj.jdbc.Driver");
            con = (Connection) DriverManager.getConnection(this.url, this.username, this.password);
            
        }catch(SQLException e){

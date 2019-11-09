@@ -16,7 +16,7 @@ import java.sql.SQLException;
 
 
 
- public class AlimentosCSV extends Conexion{
+ public class LoteCSV extends Conexion{
      
     public void crearCsv(String fecha){
         
@@ -24,10 +24,10 @@ import java.sql.SQLException;
         ResultSet rs = null;
         Connection con = getConexion();
         
-        String sql = "SELECT * FROM Alimento";
+        String sql = "SELECT * FROM Lote";
         
         try {
-            PrintWriter pw= new PrintWriter(new File("ReportesGenerados/Alimentos-"+fecha+".csv"));
+            PrintWriter pw= new PrintWriter(new File("ReportesGenerados/Lote-"+fecha+".csv"));
             StringBuilder sb=new StringBuilder();
 
             ps=con.prepareStatement(sql);
@@ -36,17 +36,21 @@ import java.sql.SQLException;
 
 
             while(rs.next()){
-                sb.append(rs.getString("idAlimento"));
+                sb.append(rs.getString("idLote"));
                 sb.append(","); 
-                sb.append(rs.getString("codigoAlimento"));
+                sb.append(rs.getString("codigoLote"));
                 sb.append(",");
-                sb.append(rs.getString("nombreAlimento"));
+                sb.append(rs.getString("fechaEntrada"));
                 sb.append(",");
-                sb.append(rs.getString("numeroBultos"));
+                sb.append(rs.getString("numHembras"));
                 sb.append(",");
-                sb.append(rs.getString("precio"));
+                sb.append(rs.getString("numMachos"));
+                sb.append(","); 
+                sb.append(rs.getString("numeroCerdos"));
                 sb.append(",");
-                sb.append(rs.getString("modificacionAlimento"));
+                sb.append(rs.getString("MEdicamento_idMedicamento"));
+                sb.append(",");
+                sb.append(rs.getString("Alimento_idAlimento"));
                 sb.append("\r\n");
          }
 
