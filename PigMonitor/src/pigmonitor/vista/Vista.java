@@ -52,12 +52,17 @@ public class Vista extends javax.swing.JFrame {
         eliminarLoteButton = new javax.swing.JButton();
         limpiarLoteButton = new javax.swing.JButton();
         idLoteTextField = new javax.swing.JTextField();
-        imagenPig = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         Alimento_idAlimento = new javax.swing.JLabel();
         alimento_idAlimentoTextField = new javax.swing.JTextField();
         medicamento_idMedicamentoTextField = new javax.swing.JTextField();
         Medicamento_idMedicamento = new javax.swing.JLabel();
+        loteEnfermedadTextField = new javax.swing.JTextField();
+        loteEnfermedadLabel = new javax.swing.JLabel();
+        LoteInsumoLabel = new javax.swing.JLabel();
+        loteInsumosTextField = new javax.swing.JTextField();
+        loteEnfermedadButton = new javax.swing.JButton();
+        loteInsumoButton = new javax.swing.JButton();
         enfermedadPanel = new javax.swing.JPanel();
         enfermedadLabel = new javax.swing.JLabel();
         codigoEnfermedadLabel = new javax.swing.JLabel();
@@ -67,13 +72,12 @@ public class Vista extends javax.swing.JFrame {
         codigoEnfermedadTextField = new javax.swing.JTextField();
         nombreEnfermedadTextField = new javax.swing.JTextField();
         numCerdosAfectTextField = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         guardarEnfermedadButton = new javax.swing.JButton();
         modificarEnfermedadButton = new javax.swing.JButton();
         eliminarEnfermedadButton = new javax.swing.JButton();
         limpiarEnfermedadButton = new javax.swing.JButton();
         buscarEnfermedadButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         alimentoPanel = new javax.swing.JPanel();
         alimentoLabel = new javax.swing.JLabel();
         idAlimentoLabel = new javax.swing.JLabel();
@@ -84,14 +88,13 @@ public class Vista extends javax.swing.JFrame {
         nombreAlimentoTextField = new javax.swing.JTextField();
         numBultosTextField = new javax.swing.JTextField();
         precioAlimentoTextField = new javax.swing.JTextField();
-        buscarAlimentoButton = new javax.swing.JButton();
         idAlimentoTextField = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
         guardarAlimentoButton = new javax.swing.JButton();
         modificarAlimentoButton = new javax.swing.JButton();
         eliminarAlimentoButton = new javax.swing.JButton();
         limpiarAlimentoButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        buscarAlimentoButton = new javax.swing.JButton();
         insumoPanel = new javax.swing.JPanel();
         insumosLabel = new javax.swing.JLabel();
         codigoInsumoLabel = new javax.swing.JLabel();
@@ -101,13 +104,12 @@ public class Vista extends javax.swing.JFrame {
         codigoInsumoTextField = new javax.swing.JTextField();
         nombreInsumoTextField = new javax.swing.JTextField();
         idInsumoTextField = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
         buscarInsumoButton = new javax.swing.JButton();
+        guardarInsumoButton = new javax.swing.JButton();
         modificarInsumoButton = new javax.swing.JButton();
         eliminarInsumoButton = new javax.swing.JButton();
         limpiarInsumosButton = new javax.swing.JButton();
-        guardarInsumoButton = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         medicamentoPanel = new javax.swing.JPanel();
         medicamentoLabel = new javax.swing.JLabel();
         codigoMedicamentoLabel = new javax.swing.JLabel();
@@ -119,388 +121,450 @@ public class Vista extends javax.swing.JFrame {
         numeroExistenciasTextField = new javax.swing.JTextField();
         precioMedicamentoTextField = new javax.swing.JTextField();
         idMedicamentoTextField = new javax.swing.JTextField();
-        buscarMedicamentoButton = new javax.swing.JButton();
-        limpiarMedicamentoButton = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
         guardarMedicamentoButton = new javax.swing.JButton();
         modificarMedicamentoButton = new javax.swing.JButton();
         eliminarMedicamentoButton = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        enfermedadesEnLotePanel = new javax.swing.JTabbedPane();
+        limpiarMedicamentoButton = new javax.swing.JButton();
+        buscarMedicamentoButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         lotePanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         loteLabel.setText("Entrada de Datos Lote");
-        lotePanel.add(loteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(268, 11, -1, -1));
-        lotePanel.add(pesoLoteTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 101, -1));
+        lotePanel.add(loteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, -1, -1));
+        lotePanel.add(pesoLoteTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 240, 80, -1));
 
-        pesoLoteLabel.setText("Ingrese el Peso Promedio del Lote");
-        lotePanel.add(pesoLoteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 210, -1, -1));
+        pesoLoteLabel.setText("Peso Promedio del Lote");
+        lotePanel.add(pesoLoteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, -1, -1));
 
         numMachosTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numMachosTextFieldActionPerformed(evt);
             }
         });
-        lotePanel.add(numMachosTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 101, -1));
+        lotePanel.add(numMachosTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 80, -1));
 
-        numMachosLabel.setText("Ingrese el Numero de Machos");
-        lotePanel.add(numMachosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 200, -1));
+        numMachosLabel.setText("Numero de Machos");
+        lotePanel.add(numMachosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, 200, -1));
 
         numHembrasTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 numHembrasTextFieldActionPerformed(evt);
             }
         });
-        lotePanel.add(numHembrasTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 100, -1));
+        lotePanel.add(numHembrasTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, 80, -1));
 
-        numHembrasLabel.setText("Ingrese el Numero de Hembras");
-        lotePanel.add(numHembrasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 200, -1));
-        lotePanel.add(codigoLoteTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 101, -1));
+        numHembrasLabel.setText("Numero de Hembras");
+        lotePanel.add(numHembrasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 200, -1));
+        lotePanel.add(codigoLoteTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, 101, -1));
 
-        numLoteLabel.setText("Ingrese el Codigo del Lote");
-        lotePanel.add(numLoteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 180, -1));
+        numLoteLabel.setText("Codigo del Lote");
+        lotePanel.add(numLoteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 190, -1));
 
+        buscarLoteButton.setBackground(new java.awt.Color(162, 251, 220));
+        buscarLoteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/search_30px.png"))); // NOI18N
         buscarLoteButton.setText("Buscar");
         buscarLoteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buscarLoteButtonActionPerformed(evt);
             }
         });
-        lotePanel.add(buscarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 67, 70, -1));
+        lotePanel.add(buscarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 90, 110, -1));
 
-        guardarLoteButton.setText("Guardar");
-        lotePanel.add(guardarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, -1, -1));
+        guardarLoteButton.setBackground(new java.awt.Color(153, 255, 153));
+        guardarLoteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/check_lock_30px.png"))); // NOI18N
+        guardarLoteButton.setText(" Guardar");
+        guardarLoteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardarLoteButtonActionPerformed(evt);
+            }
+        });
+        lotePanel.add(guardarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 120, 50));
 
-        modificarLoteButton.setText("Modificar");
-        lotePanel.add(modificarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, -1, -1));
+        modificarLoteButton.setBackground(new java.awt.Color(204, 247, 242));
+        modificarLoteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit_property_30px.png"))); // NOI18N
+        modificarLoteButton.setText(" Modificar");
+        lotePanel.add(modificarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 440, 140, 50));
 
-        eliminarLoteButton.setText("Eliminar");
-        lotePanel.add(eliminarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 380, -1, -1));
+        eliminarLoteButton.setBackground(new java.awt.Color(255, 102, 102));
+        eliminarLoteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delete_30px.png"))); // NOI18N
+        eliminarLoteButton.setText(" Eliminar");
+        lotePanel.add(eliminarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, 120, 50));
 
-        limpiarLoteButton.setText("Limpiar");
-        lotePanel.add(limpiarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, -1, -1));
+        limpiarLoteButton.setBackground(new java.awt.Color(255, 255, 204));
+        limpiarLoteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/broom_30px.png"))); // NOI18N
+        limpiarLoteButton.setText(" Limpiar");
+        limpiarLoteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiarLoteButtonActionPerformed(evt);
+            }
+        });
+        lotePanel.add(limpiarLoteButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 120, 50));
 
         idLoteTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idLoteTextFieldActionPerformed(evt);
             }
         });
-        lotePanel.add(idLoteTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 116, 70, -1));
-        lotePanel.add(imagenPig, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 0, -1, -1));
+        lotePanel.add(idLoteTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 100, 70, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
-        lotePanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
+        lotePanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 0, -1, -1));
 
-        Alimento_idAlimento.setText("Ingrese el Codigo del Alimento");
-        lotePanel.add(Alimento_idAlimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
+        Alimento_idAlimento.setText("Codigo del Alimento del Lote");
+        lotePanel.add(Alimento_idAlimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, -1, -1));
 
         alimento_idAlimentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 alimento_idAlimentoTextFieldActionPerformed(evt);
             }
         });
-        lotePanel.add(alimento_idAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 250, 101, -1));
+        lotePanel.add(alimento_idAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 80, -1));
 
         medicamento_idMedicamentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 medicamento_idMedicamentoTextFieldActionPerformed(evt);
             }
         });
-        lotePanel.add(medicamento_idMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 101, -1));
+        lotePanel.add(medicamento_idMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 170, 70, -1));
 
-        Medicamento_idMedicamento.setText("Ingrese el Codigo del Medicamento");
-        lotePanel.add(Medicamento_idMedicamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
+        Medicamento_idMedicamento.setText("Codigo del Medicamento del Lote");
+        lotePanel.add(Medicamento_idMedicamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 220, -1));
+        lotePanel.add(loteEnfermedadTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 220, 70, -1));
+
+        loteEnfermedadLabel.setText("Codigo de las Enfermedades de Lote");
+        lotePanel.add(loteEnfermedadLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 210, -1));
+
+        LoteInsumoLabel.setText("Codigo de los Insumos que Consume");
+        lotePanel.add(LoteInsumoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 280, 200, -1));
+        lotePanel.add(loteInsumosTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 280, 70, -1));
+
+        loteEnfermedadButton.setText("Agregar Enfermedad");
+        lotePanel.add(loteEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 220, 160, -1));
+
+        loteInsumoButton.setText("Agregar Insumo");
+        loteInsumoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loteInsumoButtonActionPerformed(evt);
+            }
+        });
+        lotePanel.add(loteInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 280, 130, -1));
 
         jTabbedPane1.addTab("Lote", lotePanel);
 
         enfermedadPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         enfermedadLabel.setText("Entrada de Datos de Enfermedad");
-        enfermedadPanel.add(enfermedadLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 21, -1, -1));
+        enfermedadPanel.add(enfermedadLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, -1, -1));
 
-        codigoEnfermedadLabel.setText("Ingrese el Codigo de la Enfermedad");
-        enfermedadPanel.add(codigoEnfermedadLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 153, -1, -1));
+        codigoEnfermedadLabel.setText("Codigo de la Enfermedad");
+        enfermedadPanel.add(codigoEnfermedadLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 160, -1, -1));
 
-        nombreEnfermedadLabel.setText("Ingrese el Nombre de la Enfermedad");
-        enfermedadPanel.add(nombreEnfermedadLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 194, -1, -1));
+        nombreEnfermedadLabel.setText("Nombre de la Enfermedad");
+        enfermedadPanel.add(nombreEnfermedadLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, -1, -1));
 
-        numCerdosAfectLabel.setText("Ingrese el Numero de Cerdos Afectados");
-        enfermedadPanel.add(numCerdosAfectLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 244, -1, -1));
-        enfermedadPanel.add(idEnfermedadTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 194, 65, -1));
+        numCerdosAfectLabel.setText("Numero de Cerdos Afectados");
+        enfermedadPanel.add(numCerdosAfectLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, -1));
+        enfermedadPanel.add(idEnfermedadTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 200, 65, -1));
 
         codigoEnfermedadTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 codigoEnfermedadTextFieldActionPerformed(evt);
             }
         });
-        enfermedadPanel.add(codigoEnfermedadTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 90, -1));
-        enfermedadPanel.add(nombreEnfermedadTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 194, 90, -1));
-        enfermedadPanel.add(numCerdosAfectTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 244, 90, -1));
+        enfermedadPanel.add(codigoEnfermedadTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 150, 90, -1));
+        enfermedadPanel.add(nombreEnfermedadTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 90, -1));
+        enfermedadPanel.add(numCerdosAfectTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 290, 90, -1));
 
-        guardarEnfermedadButton.setText("Guardar");
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
+        enfermedadPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 0, -1, -1));
+
+        guardarEnfermedadButton.setBackground(new java.awt.Color(153, 255, 153));
+        guardarEnfermedadButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/check_lock_30px.png"))); // NOI18N
+        guardarEnfermedadButton.setText(" Guardar");
         guardarEnfermedadButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 guardarEnfermedadButtonActionPerformed(evt);
             }
         });
-        enfermedadPanel.add(guardarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 322, -1, -1));
+        enfermedadPanel.add(guardarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 120, 50));
 
-        modificarEnfermedadButton.setText("Modificar");
-        modificarEnfermedadButton.addActionListener(new java.awt.event.ActionListener() {
+        modificarEnfermedadButton.setBackground(new java.awt.Color(204, 247, 242));
+        modificarEnfermedadButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit_property_30px.png"))); // NOI18N
+        modificarEnfermedadButton.setText(" Modificar");
+        enfermedadPanel.add(modificarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 440, 140, 50));
+
+        eliminarEnfermedadButton.setBackground(new java.awt.Color(255, 102, 102));
+        eliminarEnfermedadButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delete_30px.png"))); // NOI18N
+        eliminarEnfermedadButton.setText(" Eliminar");
+        enfermedadPanel.add(eliminarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, 120, 50));
+
+        limpiarEnfermedadButton.setBackground(new java.awt.Color(255, 255, 204));
+        limpiarEnfermedadButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/broom_30px.png"))); // NOI18N
+        limpiarEnfermedadButton.setText(" Limpiar");
+        limpiarEnfermedadButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modificarEnfermedadButtonActionPerformed(evt);
+                limpiarEnfermedadButtonActionPerformed(evt);
             }
         });
-        enfermedadPanel.add(modificarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 322, -1, -1));
+        enfermedadPanel.add(limpiarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 120, 50));
 
-        eliminarEnfermedadButton.setText("Eliminar");
-        eliminarEnfermedadButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eliminarEnfermedadButtonActionPerformed(evt);
-            }
-        });
-        enfermedadPanel.add(eliminarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 322, -1, -1));
-
-        limpiarEnfermedadButton.setText("Limpiar");
-        enfermedadPanel.add(limpiarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(557, 322, -1, -1));
-
+        buscarEnfermedadButton.setBackground(new java.awt.Color(162, 251, 220));
+        buscarEnfermedadButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/search_30px.png"))); // NOI18N
         buscarEnfermedadButton.setText("Buscar");
-        enfermedadPanel.add(buscarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(569, 149, -1, -1));
-        enfermedadPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 0, -1, -1));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
-        enfermedadPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
+        buscarEnfermedadButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarEnfermedadButtonActionPerformed(evt);
+            }
+        });
+        enfermedadPanel.add(buscarEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 110, -1));
 
         jTabbedPane1.addTab("Enfermedad", enfermedadPanel);
 
         alimentoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         alimentoLabel.setText("Entrada de Datos de Alimentos");
-        alimentoPanel.add(alimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 37, -1, -1));
+        alimentoPanel.add(alimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 50, -1, -1));
 
-        idAlimentoLabel.setText("Ingrese el Codigo de Alimento");
-        alimentoPanel.add(idAlimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 113, -1, -1));
+        idAlimentoLabel.setText("Codigo de Alimento");
+        alimentoPanel.add(idAlimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, -1, -1));
 
-        nombreAlimentoLabel.setText("Ingrese el Nombre del alimento ");
-        alimentoPanel.add(nombreAlimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 163, -1, -1));
+        nombreAlimentoLabel.setText("Nombre del alimento ");
+        alimentoPanel.add(nombreAlimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, -1, -1));
 
-        numBultosLabel.setText("Ingrese el Numero de Bultos");
-        alimentoPanel.add(numBultosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
+        numBultosLabel.setText("Numero de Bultos");
+        alimentoPanel.add(numBultosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 260, -1, -1));
 
-        precioAlimentoLabel.setText("Ingrese el Precio Total");
-        alimentoPanel.add(precioAlimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
+        precioAlimentoLabel.setText("Precio Total");
+        alimentoPanel.add(precioAlimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, -1, -1));
 
         codigoAlimentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 codigoAlimentoTextFieldActionPerformed(evt);
             }
         });
-        alimentoPanel.add(codigoAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 114, 90, -1));
+        alimentoPanel.add(codigoAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 90, -1));
 
         nombreAlimentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreAlimentoTextFieldActionPerformed(evt);
             }
         });
-        alimentoPanel.add(nombreAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 163, 90, -1));
-        alimentoPanel.add(numBultosTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 207, 90, -1));
+        alimentoPanel.add(nombreAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 90, -1));
+        alimentoPanel.add(numBultosTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 260, 90, -1));
 
         precioAlimentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 precioAlimentoTextFieldActionPerformed(evt);
             }
         });
-        alimentoPanel.add(precioAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 257, 90, -1));
+        alimentoPanel.add(precioAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 90, -1));
+        alimentoPanel.add(idAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 80, -1));
 
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
+        alimentoPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 0, -1, -1));
+
+        guardarAlimentoButton.setBackground(new java.awt.Color(153, 255, 153));
+        guardarAlimentoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/check_lock_30px.png"))); // NOI18N
+        guardarAlimentoButton.setText(" Guardar");
+        guardarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardarAlimentoButtonActionPerformed(evt);
+            }
+        });
+        alimentoPanel.add(guardarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 120, 50));
+
+        modificarAlimentoButton.setBackground(new java.awt.Color(204, 247, 242));
+        modificarAlimentoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit_property_30px.png"))); // NOI18N
+        modificarAlimentoButton.setText(" Modificar");
+        alimentoPanel.add(modificarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 440, 140, 50));
+
+        eliminarAlimentoButton.setBackground(new java.awt.Color(255, 102, 102));
+        eliminarAlimentoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delete_30px.png"))); // NOI18N
+        eliminarAlimentoButton.setText(" Eliminar");
+        alimentoPanel.add(eliminarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, 120, 50));
+
+        limpiarAlimentoButton.setBackground(new java.awt.Color(255, 255, 204));
+        limpiarAlimentoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/broom_30px.png"))); // NOI18N
+        limpiarAlimentoButton.setText(" Limpiar");
+        limpiarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiarAlimentoButtonActionPerformed(evt);
+            }
+        });
+        alimentoPanel.add(limpiarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 120, 50));
+
+        buscarAlimentoButton.setBackground(new java.awt.Color(162, 251, 220));
+        buscarAlimentoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/search_30px.png"))); // NOI18N
         buscarAlimentoButton.setText("Buscar");
         buscarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buscarAlimentoButtonActionPerformed(evt);
             }
         });
-        alimentoPanel.add(buscarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(467, 113, 80, -1));
-        alimentoPanel.add(idAlimentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(467, 163, 80, -1));
-
-        guardarAlimentoButton.setText("Guardar");
-        guardarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                guardarAlimentoButtonActionPerformed(evt);
-            }
-        });
-        alimentoPanel.add(guardarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 320, -1, -1));
-
-        modificarAlimentoButton.setText("Modificar");
-        modificarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modificarAlimentoButtonActionPerformed(evt);
-            }
-        });
-        alimentoPanel.add(modificarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, -1, -1));
-
-        eliminarAlimentoButton.setText("Eliminar");
-        eliminarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eliminarAlimentoButtonActionPerformed(evt);
-            }
-        });
-        alimentoPanel.add(eliminarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 320, -1, -1));
-
-        limpiarAlimentoButton.setText("Limpiar");
-        limpiarAlimentoButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                limpiarAlimentoButtonActionPerformed(evt);
-            }
-        });
-        alimentoPanel.add(limpiarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, -1, -1));
-        alimentoPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 11, -1, -1));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
-        alimentoPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
+        alimentoPanel.add(buscarAlimentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 110, -1));
 
         jTabbedPane1.addTab("Alimento", alimentoPanel);
 
         insumoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         insumosLabel.setText("Entrada de Datos de Insumos");
-        insumoPanel.add(insumosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, -1, -1));
+        insumoPanel.add(insumosLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 60, -1, -1));
 
         codigoInsumoLabel.setText("Codigo de Insumo");
-        insumoPanel.add(codigoInsumoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 110, -1, -1));
+        insumoPanel.add(codigoInsumoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, -1, -1));
 
         nombreInsumoLabel.setText("Nombre de Insumo");
-        insumoPanel.add(nombreInsumoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, -1, -1));
+        insumoPanel.add(nombreInsumoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, -1, -1));
 
         precioInsumoLabel.setText("Precio del Insumo");
-        insumoPanel.add(precioInsumoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 230, -1, -1));
-        insumoPanel.add(precioInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 130, -1));
-        insumoPanel.add(codigoInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 130, -1));
-        insumoPanel.add(nombreInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 130, -1));
-        insumoPanel.add(idInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 60, -1));
-
-        buscarInsumoButton.setText("Buscar");
-        insumoPanel.add(buscarInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 80, -1));
-
-        modificarInsumoButton.setText("Modificar");
-        modificarInsumoButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modificarInsumoButtonActionPerformed(evt);
-            }
-        });
-        insumoPanel.add(modificarInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, -1, -1));
-
-        eliminarInsumoButton.setText("Eliminar");
-        insumoPanel.add(eliminarInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, -1, -1));
-
-        limpiarInsumosButton.setText("Limpiar");
-        insumoPanel.add(limpiarInsumosButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, -1, -1));
-
-        guardarInsumoButton.setText("Guardar");
-        insumoPanel.add(guardarInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 310, -1, -1));
-        insumoPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, -1, -1));
+        insumoPanel.add(precioInsumoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 280, -1, -1));
+        insumoPanel.add(precioInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, 130, -1));
+        insumoPanel.add(codigoInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 130, -1));
+        insumoPanel.add(nombreInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 130, -1));
+        insumoPanel.add(idInsumoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 200, 60, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
-        insumoPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
+        insumoPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 0, -1, -1));
+
+        buscarInsumoButton.setBackground(new java.awt.Color(162, 251, 220));
+        buscarInsumoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/search_30px.png"))); // NOI18N
+        buscarInsumoButton.setText("Buscar");
+        buscarInsumoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buscarInsumoButtonActionPerformed(evt);
+            }
+        });
+        insumoPanel.add(buscarInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 110, -1));
+
+        guardarInsumoButton.setBackground(new java.awt.Color(153, 255, 153));
+        guardarInsumoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/check_lock_30px.png"))); // NOI18N
+        guardarInsumoButton.setText(" Guardar");
+        guardarInsumoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardarInsumoButtonActionPerformed(evt);
+            }
+        });
+        insumoPanel.add(guardarInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 120, 50));
+
+        modificarInsumoButton.setBackground(new java.awt.Color(204, 247, 242));
+        modificarInsumoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit_property_30px.png"))); // NOI18N
+        modificarInsumoButton.setText(" Modificar");
+        insumoPanel.add(modificarInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 440, 140, 50));
+
+        eliminarInsumoButton.setBackground(new java.awt.Color(255, 102, 102));
+        eliminarInsumoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delete_30px.png"))); // NOI18N
+        eliminarInsumoButton.setText(" Eliminar");
+        insumoPanel.add(eliminarInsumoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, 120, 50));
+
+        limpiarInsumosButton.setBackground(new java.awt.Color(255, 255, 204));
+        limpiarInsumosButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/broom_30px.png"))); // NOI18N
+        limpiarInsumosButton.setText(" Limpiar");
+        limpiarInsumosButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limpiarInsumosButtonActionPerformed(evt);
+            }
+        });
+        insumoPanel.add(limpiarInsumosButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 120, 50));
 
         jTabbedPane1.addTab("Insumos", insumoPanel);
 
         medicamentoPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         medicamentoLabel.setText("Entrada de Datos de Medicamentos");
-        medicamentoPanel.add(medicamentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(216, 31, -1, -1));
+        medicamentoPanel.add(medicamentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, -1, -1));
 
         codigoMedicamentoLabel.setText("Codigo de Medicamento");
-        medicamentoPanel.add(codigoMedicamentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 81, -1, -1));
+        medicamentoPanel.add(codigoMedicamentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, -1, -1));
 
         nombreMedicamentoLabel.setText("Nombre de Medicamento ");
-        medicamentoPanel.add(nombreMedicamentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 129, -1, -1));
+        medicamentoPanel.add(nombreMedicamentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, -1, -1));
 
         numeroExistenciasLabel.setText("Numero de Existencias ");
-        medicamentoPanel.add(numeroExistenciasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 169, -1, -1));
+        medicamentoPanel.add(numeroExistenciasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, -1, -1));
 
         precioMedicamentoLabel.setText("Precio por Unidad");
-        medicamentoPanel.add(precioMedicamentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 216, -1, -1));
+        medicamentoPanel.add(precioMedicamentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 350, -1, -1));
 
         codigoMedicamentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 codigoMedicamentoTextFieldActionPerformed(evt);
             }
         });
-        medicamentoPanel.add(codigoMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 82, 110, -1));
+        medicamentoPanel.add(codigoMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 160, 110, -1));
 
         nombreMedicamentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nombreMedicamentoTextFieldActionPerformed(evt);
             }
         });
-        medicamentoPanel.add(nombreMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 129, 110, -1));
-        medicamentoPanel.add(numeroExistenciasTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 167, 110, -1));
+        medicamentoPanel.add(nombreMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 110, -1));
+        medicamentoPanel.add(numeroExistenciasTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 280, 110, -1));
 
         precioMedicamentoTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 precioMedicamentoTextFieldActionPerformed(evt);
             }
         });
-        medicamentoPanel.add(precioMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 213, 110, -1));
-        medicamentoPanel.add(idMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(481, 129, 65, -1));
+        medicamentoPanel.add(precioMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 340, 110, -1));
+        medicamentoPanel.add(idMedicamentoTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 210, 65, -1));
 
-        buscarMedicamentoButton.setText("Buscar");
-        medicamentoPanel.add(buscarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(481, 81, -1, -1));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
+        medicamentoPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 0, -1, -1));
 
-        limpiarMedicamentoButton.setText("Limpiar");
-        limpiarMedicamentoButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                limpiarMedicamentoButtonActionPerformed(evt);
-            }
-        });
-        medicamentoPanel.add(limpiarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 317, -1, -1));
-
-        guardarMedicamentoButton.setText("Guardar");
+        guardarMedicamentoButton.setBackground(new java.awt.Color(153, 255, 153));
+        guardarMedicamentoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/check_lock_30px.png"))); // NOI18N
+        guardarMedicamentoButton.setText(" Guardar");
         guardarMedicamentoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 guardarMedicamentoButtonActionPerformed(evt);
             }
         });
-        medicamentoPanel.add(guardarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 317, -1, -1));
+        medicamentoPanel.add(guardarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 120, 50));
 
-        modificarMedicamentoButton.setText("Modificar");
-        modificarMedicamentoButton.addActionListener(new java.awt.event.ActionListener() {
+        modificarMedicamentoButton.setBackground(new java.awt.Color(204, 247, 242));
+        modificarMedicamentoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit_property_30px.png"))); // NOI18N
+        modificarMedicamentoButton.setText(" Modificar");
+        medicamentoPanel.add(modificarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 440, 140, 50));
+
+        eliminarMedicamentoButton.setBackground(new java.awt.Color(255, 102, 102));
+        eliminarMedicamentoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/delete_30px.png"))); // NOI18N
+        eliminarMedicamentoButton.setText(" Eliminar");
+        medicamentoPanel.add(eliminarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 440, 120, 50));
+
+        limpiarMedicamentoButton.setBackground(new java.awt.Color(255, 255, 204));
+        limpiarMedicamentoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/broom_30px.png"))); // NOI18N
+        limpiarMedicamentoButton.setText(" Limpiar");
+        limpiarMedicamentoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                modificarMedicamentoButtonActionPerformed(evt);
+                limpiarMedicamentoButtonActionPerformed(evt);
             }
         });
-        medicamentoPanel.add(modificarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 317, -1, -1));
+        medicamentoPanel.add(limpiarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 120, 50));
 
-        eliminarMedicamentoButton.setText("Eliminar");
-        eliminarMedicamentoButton.addActionListener(new java.awt.event.ActionListener() {
+        buscarMedicamentoButton.setBackground(new java.awt.Color(162, 251, 220));
+        buscarMedicamentoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/search_30px.png"))); // NOI18N
+        buscarMedicamentoButton.setText("Buscar");
+        buscarMedicamentoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                eliminarMedicamentoButtonActionPerformed(evt);
+                buscarMedicamentoButtonActionPerformed(evt);
             }
         });
-        medicamentoPanel.add(eliminarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 317, -1, -1));
-        medicamentoPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(426, 11, -1, -1));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/minilogo.png"))); // NOI18N
-        medicamentoPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
+        medicamentoPanel.add(buscarMedicamentoButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 150, 110, -1));
 
         jTabbedPane1.addTab("Medicamento", medicamentoPanel);
-        jTabbedPane1.addTab("Enfermedades en Lote", enfermedadesEnLotePanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 704, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 451, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 582, Short.MAX_VALUE)
         );
 
         pack();
@@ -518,15 +582,6 @@ public class Vista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_precioAlimentoTextFieldActionPerformed
 
-    private void eliminarEnfermedadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarEnfermedadButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_eliminarEnfermedadButtonActionPerformed
-
-    private void guardarEnfermedadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarEnfermedadButtonActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_guardarEnfermedadButtonActionPerformed
-
     private void numHembrasTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_numHembrasTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_numHembrasTextFieldActionPerformed
@@ -535,33 +590,9 @@ public class Vista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_numMachosTextFieldActionPerformed
 
-    private void modificarEnfermedadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarEnfermedadButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_modificarEnfermedadButtonActionPerformed
-
     private void codigoEnfermedadTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoEnfermedadTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_codigoEnfermedadTextFieldActionPerformed
-
-    private void limpiarAlimentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarAlimentoButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_limpiarAlimentoButtonActionPerformed
-
-    private void guardarAlimentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarAlimentoButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_guardarAlimentoButtonActionPerformed
-
-    private void modificarAlimentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarAlimentoButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_modificarAlimentoButtonActionPerformed
-
-    private void eliminarAlimentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarAlimentoButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_eliminarAlimentoButtonActionPerformed
-
-    private void buscarAlimentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarAlimentoButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_buscarAlimentoButtonActionPerformed
 
     private void codigoMedicamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_codigoMedicamentoTextFieldActionPerformed
         // TODO add your handling code here:
@@ -571,10 +602,6 @@ public class Vista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_precioMedicamentoTextFieldActionPerformed
 
-    private void modificarInsumoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarInsumoButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_modificarInsumoButtonActionPerformed
-
     private void idLoteTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idLoteTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_idLoteTextFieldActionPerformed
@@ -582,22 +609,6 @@ public class Vista extends javax.swing.JFrame {
     private void buscarLoteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarLoteButtonActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_buscarLoteButtonActionPerformed
-
-    private void guardarMedicamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarMedicamentoButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_guardarMedicamentoButtonActionPerformed
-
-    private void modificarMedicamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modificarMedicamentoButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_modificarMedicamentoButtonActionPerformed
-
-    private void eliminarMedicamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_eliminarMedicamentoButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_eliminarMedicamentoButtonActionPerformed
-
-    private void limpiarMedicamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarMedicamentoButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_limpiarMedicamentoButtonActionPerformed
 
     private void nombreMedicamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreMedicamentoTextFieldActionPerformed
         // TODO add your handling code here:
@@ -610,6 +621,66 @@ public class Vista extends javax.swing.JFrame {
     private void medicamento_idMedicamentoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_medicamento_idMedicamentoTextFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_medicamento_idMedicamentoTextFieldActionPerformed
+
+    private void loteInsumoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loteInsumoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loteInsumoButtonActionPerformed
+
+    private void guardarLoteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarLoteButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guardarLoteButtonActionPerformed
+
+    private void limpiarLoteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarLoteButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_limpiarLoteButtonActionPerformed
+
+    private void guardarEnfermedadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarEnfermedadButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guardarEnfermedadButtonActionPerformed
+
+    private void limpiarEnfermedadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarEnfermedadButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_limpiarEnfermedadButtonActionPerformed
+
+    private void buscarEnfermedadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarEnfermedadButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buscarEnfermedadButtonActionPerformed
+
+    private void guardarAlimentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarAlimentoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guardarAlimentoButtonActionPerformed
+
+    private void limpiarAlimentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarAlimentoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_limpiarAlimentoButtonActionPerformed
+
+    private void buscarAlimentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarAlimentoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buscarAlimentoButtonActionPerformed
+
+    private void buscarInsumoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarInsumoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buscarInsumoButtonActionPerformed
+
+    private void guardarInsumoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarInsumoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guardarInsumoButtonActionPerformed
+
+    private void limpiarInsumosButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarInsumosButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_limpiarInsumosButtonActionPerformed
+
+    private void guardarMedicamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarMedicamentoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_guardarMedicamentoButtonActionPerformed
+
+    private void limpiarMedicamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limpiarMedicamentoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_limpiarMedicamentoButtonActionPerformed
+
+    private void buscarMedicamentoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buscarMedicamentoButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buscarMedicamentoButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -649,6 +720,7 @@ public class Vista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel Alimento_idAlimento;
+    private javax.swing.JLabel LoteInsumoLabel;
     public javax.swing.JLabel Medicamento_idMedicamento;
     private javax.swing.JLabel alimentoLabel;
     private javax.swing.JPanel alimentoPanel;
@@ -673,7 +745,6 @@ public class Vista extends javax.swing.JFrame {
     public javax.swing.JButton eliminarMedicamentoButton;
     private javax.swing.JLabel enfermedadLabel;
     private javax.swing.JPanel enfermedadPanel;
-    private javax.swing.JTabbedPane enfermedadesEnLotePanel;
     public javax.swing.JButton guardarAlimentoButton;
     public javax.swing.JButton guardarEnfermedadButton;
     public javax.swing.JButton guardarInsumoButton;
@@ -685,13 +756,8 @@ public class Vista extends javax.swing.JFrame {
     public javax.swing.JTextField idInsumoTextField;
     public javax.swing.JTextField idLoteTextField;
     public javax.swing.JTextField idMedicamentoTextField;
-    private javax.swing.JLabel imagenPig;
     private javax.swing.JPanel insumoPanel;
     private javax.swing.JLabel insumosLabel;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -703,6 +769,11 @@ public class Vista extends javax.swing.JFrame {
     public javax.swing.JButton limpiarInsumosButton;
     public javax.swing.JButton limpiarLoteButton;
     public javax.swing.JButton limpiarMedicamentoButton;
+    private javax.swing.JButton loteEnfermedadButton;
+    private javax.swing.JLabel loteEnfermedadLabel;
+    private javax.swing.JTextField loteEnfermedadTextField;
+    private javax.swing.JButton loteInsumoButton;
+    private javax.swing.JTextField loteInsumosTextField;
     private javax.swing.JLabel loteLabel;
     private javax.swing.JPanel lotePanel;
     private javax.swing.JLabel medicamentoLabel;
