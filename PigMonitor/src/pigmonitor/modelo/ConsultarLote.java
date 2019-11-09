@@ -5,12 +5,16 @@
  */
 package pigmonitor.modelo;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,6 +22,9 @@ import java.util.Date;
  */
 public class ConsultarLote extends Conexion{
      
+    private ArrayList<Integer> enfermedades_id = new ArrayList<>();
+    private ArrayList<Integer> insumos_id = new ArrayList<>();
+        
     public boolean registrar(Lote lote){
         PreparedStatement ps =null;
         Connection con = getConexion();
@@ -29,7 +36,6 @@ public class ConsultarLote extends Conexion{
         String sql = "INSERT INTO Lote (codigoLote, fechaEntrada, numeroCerdos, PesoPromedio, numMachos, numHembras, Alimento_idAlimento, Medicamento_idMedicamento) VALUES(?,?,?,?,?,?,?,?)";
         
         try{
-            
             ps = con.prepareStatement(sql);
             ps.setInt(1, lote.getCodigoLote());
             ps.setString(2, new_Date);
@@ -40,8 +46,8 @@ public class ConsultarLote extends Conexion{
             ps.setInt(7, lote.getAlimento_idAlimento());
             ps.setInt(8, lote.getMedicamento_idMedicamento());
             ps.execute();
-
-            
+            insertarEnfermedades(enfermedades_id, lote);
+            insertarInsumos(insumos_id, lote);
             return true;
             
         }catch(SQLException e){
@@ -149,6 +155,41 @@ public class ConsultarLote extends Conexion{
                 System.err.println(e);
             }
         }
-    }
+    } 
+    
+    public void insertarEnfermedades(ArrayList <Integer> enfermedad, Lote lote){
+        CallableStatement cs;
+        Connection con = getConexion();
+        try {   
+            cs = con.prepareCall("{ call InsertarLote_has_enfermedad(?,?)}");
+            int codigoEnfermedad;
+            for (int i = 0; i < enfermedad.size(); i++) {
+                codigoEnfermedad = enfermedad.get(1);
+                cs.setString("Lote_idLote" , Integer.toString(lote.getCodigoLote()));
+                cs.setString("Enfermedad_idEnfermedad" , Integer.toString(codigoEnfermedad));
+                cs.executeUpdate();
+            }
+        } catch (SQLException e) {
+            System.err.println(e);
+        }
+    } 
+    
+    public void insertarInsumos(ArrayList <Integer> insumos, Lote lote){
+        CallableStatement cs;
+        Connection con = getConexion();
+        try {   
+            cs = con.prepareCall("{ call InsertarLote_has_insumos(?,?)}");
+            int codigoInsumo;
+            for (int i = 0; i < insumos.size(); i++) {
+                codigoInsumo= insumos.get(1);
+                cs.setString("Lote_idLote" , Integer.toString(lote.getCodigoLote()));
+                cs.setString("Insumos_idInsumos" , Integer.toString(codigoInsumo));
+                cs.executeUpdate();
+            }
+        } catch (SQLException e) {
+            System.err.println(e);
+        }
+    }     
+    
     
 }

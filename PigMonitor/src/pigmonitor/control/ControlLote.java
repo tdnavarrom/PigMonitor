@@ -104,11 +104,8 @@ public class ControlLote implements ActionListener{
         }
         if(e.getSource() == vista.limpiarLoteButton){
             limpiar();
-        }
-        
-        
+        }    
     }
-    
     public void limpiar(){
         vista.idLoteTextField.setText(null);
         vista.codigoLoteTextField.setText(null);

@@ -242,6 +242,11 @@ public class Vista extends javax.swing.JFrame {
         lotePanel.add(loteInsumosTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 280, 70, -1));
 
         loteEnfermedadButton.setText("Agregar Enfermedad");
+        loteEnfermedadButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                loteEnfermedadButtonActionPerformed(evt);
+            }
+        });
         lotePanel.add(loteEnfermedadButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 220, 160, -1));
 
         loteInsumoButton.setText("Agregar Insumo");
@@ -682,6 +687,10 @@ public class Vista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_buscarMedicamentoButtonActionPerformed
 
+    private void loteEnfermedadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loteEnfermedadButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_loteEnfermedadButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -769,10 +778,10 @@ public class Vista extends javax.swing.JFrame {
     public javax.swing.JButton limpiarInsumosButton;
     public javax.swing.JButton limpiarLoteButton;
     public javax.swing.JButton limpiarMedicamentoButton;
-    private javax.swing.JButton loteEnfermedadButton;
+    public javax.swing.JButton loteEnfermedadButton;
     private javax.swing.JLabel loteEnfermedadLabel;
     private javax.swing.JTextField loteEnfermedadTextField;
-    private javax.swing.JButton loteInsumoButton;
+    public javax.swing.JButton loteInsumoButton;
     private javax.swing.JTextField loteInsumosTextField;
     private javax.swing.JLabel loteLabel;
     private javax.swing.JPanel lotePanel;

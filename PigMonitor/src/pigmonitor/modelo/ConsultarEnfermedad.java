@@ -19,7 +19,6 @@ import java.util.Date;
  */
 public class ConsultarEnfermedad extends Conexion {
     
-    private ArrayList<Integer> enfermedades_id = new ArrayList<>();
 
     public boolean registrar(Enfermedad enf){
         PreparedStatement ps =null;
@@ -34,7 +33,6 @@ public class ConsultarEnfermedad extends Conexion {
         try{
             
             ps = con.prepareStatement(sql);
-            enfermedades_id.add(enf.getCodigoEnfermedad());
             ps.setInt(1, enf.getCodigoEnfermedad());
             ps.setString(2, enf.getNombreEnfermedad());
             ps.setInt(3, enf.getCerdosAfectados());
@@ -97,7 +95,6 @@ public class ConsultarEnfermedad extends Conexion {
         try{
          
             ps = con.prepareStatement(sql);
-            enfermedades_id.remove(enfermedades_id.indexOf(enf.getCodigoEnfermedad()));
             ps.setInt(1, enf.getIdEnfermedad());
             ps.execute();
             return true;
@@ -147,10 +144,6 @@ public class ConsultarEnfermedad extends Conexion {
                 System.err.println(e);
             }
         }
-    }
-
-    public ArrayList<Integer> getEnfermedadesRegistradas(){
-        return enfermedades_id;
     }
     
 }
