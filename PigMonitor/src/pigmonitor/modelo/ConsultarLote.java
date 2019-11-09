@@ -42,11 +42,9 @@ public class ConsultarLote extends Conexion{
             ps.setFloat(4, lote.getPesoPromedio());
             ps.setInt(5, lote.getNumMachos());
             ps.setInt(6, lote.getNumHembras());
-            ps.setInt(7, lote.getAlimento_idAlimento());
-            ps.setInt(8, lote.getMedicamento_idMedicamento());
+            ps.setInt(7, getIdTabla(lote.getAlimento_idAlimento(),"Alimento"));
+            ps.setInt(8, getIdTabla(lote.getMedicamento_idMedicamento(), "Medicamento"));
             ps.execute();
-            insertarEnfermedades(enfermedades_id, lote);
-            insertarInsumos(insumos_id, lote);
             return true;
             
         }catch(SQLException e){
@@ -139,6 +137,13 @@ public class ConsultarLote extends Conexion{
             if(rs.next()){
                lote.setIdLote(Integer.parseInt(rs.getString("idLote")));
                lote.setCodigoLote(rs.getInt("codigoLote"));
+               lote.setNumHembras(Integer.parseInt(rs.getString("numHembras")));
+               lote.setNumMachos(rs.getInt("numMachos"));
+               lote.setPesoPromedio(rs.getInt("PesoPromedio"));
+               lote.setNumeroCerdos(Integer.parseInt(rs.getString("numeroCerdos")));
+               lote.setMedicamento_idMedicamento(getCodigoTable(rs.getInt("Medicamento_idMedicamento"), "Medicamento"));
+               lote.setAlimento_idAlimento(getCodigoTable(rs.getInt("Alimento_idAlimento"), "Alimento"));
+       
                return true;         
             }
       
@@ -164,8 +169,11 @@ public class ConsultarLote extends Conexion{
             int codigoEnfermedad;
             for (int i = 0; i < enfermedad.size(); i++) {
                 codigoEnfermedad = enfermedad.get(1);
-                cs.setString("Lote_idLote" , Integer.toString(lote.getCodigoLote()));
-                cs.setString("Enfermedad_idEnfermedad" , Integer.toString(codigoEnfermedad));
+                cs.setString("Lote_idLote" , Integer.toString(lote.getIdLote()));
+                
+                int idEnfermedad = getIdTabla(codigoEnfermedad, "Enfermedad");
+                
+                cs.setString("Enfermedad_idEnfermedad" , Integer.toString(idEnfermedad));
                 cs.executeUpdate();
             }
         } catch (SQLException e) {
@@ -176,13 +184,17 @@ public class ConsultarLote extends Conexion{
     public void insertarInsumos(ArrayList <Integer> insumos, Lote lote){
         CallableStatement cs;
         Connection con = getConexion();
+        
         try {   
             cs = con.prepareCall("{ call InsertarLote_has_insumos(?,?)}");
             int codigoInsumo;
             for (int i = 0; i < insumos.size(); i++) {
                 codigoInsumo= insumos.get(1);
                 cs.setString("Lote_idLote" , Integer.toString(lote.getCodigoLote()));
-                cs.setString("Insumos_idInsumos" , Integer.toString(codigoInsumo));
+                
+                int idInsumo = getIdTabla(codigoInsumo, "Insumos");
+                
+                cs.setString("Insumos_idInsumos" , Integer.toString(idInsumo));
                 cs.executeUpdate();
             }
         } catch (SQLException e) {
@@ -190,5 +202,57 @@ public class ConsultarLote extends Conexion{
         }
     }     
     
+    public int getIdTabla(int codigoTabla, String table){
+        PreparedStatement ps =null;
+        ResultSet rs = null;
+        Connection con = getConexion();
+        
+        String sql = "SELECT * FROM " + table + " WHERE codigo"+table+"=?";
+        
+        try{
+            
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, codigoTabla);
+            rs = ps.executeQuery();
+            
+            if(rs.next()){
+               return rs.getInt("id" + table);
+            }
+            
+            return 0;
+            
+        }catch(SQLException e){
+            System.err.println(e);
+            return 0;
+        }
+    }
+    
+    
+ 
+    
+    public int getCodigoTable(int idTable, String table){
+        PreparedStatement ps =null;
+        ResultSet rs = null;
+        Connection con = getConexion();
+        
+        String sql = "SELECT * FROM " + table +  " WHERE id"+table+"=?";
+        
+        try{
+            
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, idTable);
+            rs = ps.executeQuery();
+            
+            if(rs.next()){
+               return rs.getInt("codigo"+table);
+            }
+            
+            return 0;
+            
+        }catch(SQLException e){
+            System.err.println(e);
+            return 0;
+        }
+    }
     
 }
