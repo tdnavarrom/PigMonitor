@@ -7,7 +7,7 @@ package pigmonitor.modelo;
 public class Enfermedad {
     
     private int idEnfermedad;
-    private String codigoEnfermedad;
+    private int codigoEnfermedad;
     private String nombreEnfermedad;
     private int cerdosAfectados;
     private String modificacionEnfermedad;
@@ -21,11 +21,11 @@ public class Enfermedad {
         this.idEnfermedad = idEnfermedad;
     }
     
-    public String getCodigoEnfermedad() {
+    public int getCodigoEnfermedad() {
         return codigoEnfermedad;
     }
 
-    public void setCodigoEnfermedad(String codigoEnfermedad) {
+    public void setCodigoEnfermedad(int codigoEnfermedad) {
         this.codigoEnfermedad = codigoEnfermedad;
     }
 

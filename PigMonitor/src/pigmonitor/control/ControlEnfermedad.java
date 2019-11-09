@@ -41,7 +41,7 @@ public class ControlEnfermedad implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e){
         if(e.getSource() == vista.guardarEnfermedadButton){
-            enfe.setCodigoEnfermedad(vista.codigoEnfermedadTextField.getText());
+            enfe.setCodigoEnfermedad(Integer.parseInt(vista.codigoEnfermedadTextField.getText()));
             enfe.setNombreEnfermedad(vista.nombreEnfermedadTextField.getText());
             enfe.setCerdosAfectados(Integer.parseInt(vista.numCerdosAfectTextField.getText()));
             
@@ -55,7 +55,7 @@ public class ControlEnfermedad implements ActionListener{
         } 
         if(e.getSource() == vista.modificarEnfermedadButton){
             enfe.setIdEnfermedad(Integer.parseInt(vista.idEnfermedadTextField.getText()));
-            enfe.setCodigoEnfermedad(vista.codigoEnfermedadTextField.getText());
+            enfe.setCodigoEnfermedad(Integer.parseInt(vista.codigoEnfermedadTextField.getText()));
             enfe.setNombreEnfermedad(vista.nombreEnfermedadTextField.getText());
             enfe.setCerdosAfectados(Integer.parseInt(vista.numCerdosAfectTextField.getText()));
             
@@ -79,11 +79,11 @@ public class ControlEnfermedad implements ActionListener{
             }
         } 
         if(e.getSource() == vista.buscarEnfermedadButton){
-            enfe.setCodigoEnfermedad(vista.codigoEnfermedadTextField.getText());
+            enfe.setCodigoEnfermedad(Integer.parseInt(vista.codigoEnfermedadTextField.getText()));
             
             if(enfeC.buscar(enfe)){
                 vista.idEnfermedadTextField.setText(String.valueOf(enfe.getIdEnfermedad()));
-                vista.codigoEnfermedadTextField.setText(enfe.getCodigoEnfermedad());
+                vista.codigoEnfermedadTextField.setText(String.valueOf(enfe.getCodigoEnfermedad()));
                 vista.nombreEnfermedadTextField.setText(enfe.getNombreEnfermedad());
                 vista.numCerdosAfectTextField.setText(String.valueOf(enfe.getCerdosAfectados()));
             }else{

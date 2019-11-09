@@ -126,6 +126,7 @@ public class Vista extends javax.swing.JFrame {
         eliminarMedicamentoButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        enfermedadesEnLotePanel = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -159,7 +160,7 @@ public class Vista extends javax.swing.JFrame {
         lotePanel.add(numHembrasLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 200, -1));
         lotePanel.add(codigoLoteTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, 101, -1));
 
-        numLoteLabel.setText("Ingrese el Numero del Lote");
+        numLoteLabel.setText("Ingrese el Codigo del Lote");
         lotePanel.add(numLoteLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 180, -1));
 
         buscarLoteButton.setText("Buscar");
@@ -220,7 +221,7 @@ public class Vista extends javax.swing.JFrame {
         enfermedadLabel.setText("Entrada de Datos de Enfermedad");
         enfermedadPanel.add(enfermedadLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(236, 21, -1, -1));
 
-        codigoEnfermedadLabel.setText("Ingrese el Numero de la Enfermedad");
+        codigoEnfermedadLabel.setText("Ingrese el Codigo de la Enfermedad");
         enfermedadPanel.add(codigoEnfermedadLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 153, -1, -1));
 
         nombreEnfermedadLabel.setText("Ingrese el Nombre de la Enfermedad");
@@ -280,7 +281,7 @@ public class Vista extends javax.swing.JFrame {
         alimentoLabel.setText("Entrada de Datos de Alimentos");
         alimentoPanel.add(alimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(244, 37, -1, -1));
 
-        idAlimentoLabel.setText("Ingrese el Numero de Alimento");
+        idAlimentoLabel.setText("Ingrese el Codigo de Alimento");
         alimentoPanel.add(idAlimentoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 113, -1, -1));
 
         nombreAlimentoLabel.setText("Ingrese el Nombre del alimento ");
@@ -485,6 +486,7 @@ public class Vista extends javax.swing.JFrame {
         medicamentoPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
 
         jTabbedPane1.addTab("Medicamento", medicamentoPanel);
+        jTabbedPane1.addTab("Enfermedades en Lote", enfermedadesEnLotePanel);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -671,6 +673,7 @@ public class Vista extends javax.swing.JFrame {
     public javax.swing.JButton eliminarMedicamentoButton;
     private javax.swing.JLabel enfermedadLabel;
     private javax.swing.JPanel enfermedadPanel;
+    private javax.swing.JTabbedPane enfermedadesEnLotePanel;
     public javax.swing.JButton guardarAlimentoButton;
     public javax.swing.JButton guardarEnfermedadButton;
     public javax.swing.JButton guardarInsumoButton;

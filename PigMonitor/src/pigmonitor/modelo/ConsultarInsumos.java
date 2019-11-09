@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -18,6 +19,7 @@ import java.util.Date;
  */
 public class ConsultarInsumos extends Conexion{
     
+    private ArrayList<Integer> insumos_id = new ArrayList<>();
     
     public boolean registrar(Insumos insumo){
         PreparedStatement ps =null;
@@ -33,6 +35,7 @@ public class ConsultarInsumos extends Conexion{
             
             ps = con.prepareStatement(sql);
             ps.setInt(1, insumo.getCodigoInsumos());
+            insumos_id.add(insumo.getCodigoInsumos());
             ps.setString(2, insumo.getNombreInsumo());
             ps.setInt(3, insumo.getPrecio());
             ps.setString(4, new_Date);
@@ -94,6 +97,7 @@ public class ConsultarInsumos extends Conexion{
         try{
          
             ps = con.prepareStatement(sql);
+            insumos_id.remove(insumos_id.indexOf(insumo.getCodigoInsumos()));
             ps.setInt(1, insumo.getIdInsumos());
             ps.execute();
             return true;
@@ -145,4 +149,8 @@ public class ConsultarInsumos extends Conexion{
         }
     }
     
+    public ArrayList<Integer> getInsumosRegistrados(){
+        return insumos_id;
+    }
+
 }
