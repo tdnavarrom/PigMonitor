@@ -102,8 +102,8 @@ public class ConsultarLote extends Conexion{
         
         String sql = "DELETE FROM Lote WHERE idLote=?";
         
-        try{
-         
+        
+        try{          
             ps = con.prepareStatement(sql);
             ps.setInt(1, lote.getIdLote());
             ps.execute();
@@ -125,6 +125,9 @@ public class ConsultarLote extends Conexion{
         PreparedStatement ps =null;
         ResultSet rs = null;
         Connection con = getConexion();
+        
+        eliminarTablaHas(lote, "enfermedad");
+        eliminarTablaHas(lote, "insumos");
         
         String sql = "SELECT * FROM Lote WHERE codigoLote=?";
         
@@ -161,46 +164,64 @@ public class ConsultarLote extends Conexion{
         }
     } 
     
-    public void insertarEnfermedades(ArrayList <Integer> enfermedad, Lote lote){
+    public void insertarEnfermedades(int enfermedad, Lote lote){
         CallableStatement cs;
         Connection con = getConexion();
         try {   
             cs = con.prepareCall("{ call InsertarLote_has_enfermedad(?,?)}");
-            int codigoEnfermedad;
-            for (int i = 0; i < enfermedad.size(); i++) {
-                codigoEnfermedad = enfermedad.get(1);
-                cs.setString("Lote_idLote" , Integer.toString(lote.getIdLote()));
+            int codigoEnfermedad = enfermedad;
+            int idLote = getIdTabla(lote.getCodigoLote(), "Lote");
                 
-                int idEnfermedad = getIdTabla(codigoEnfermedad, "Enfermedad");
+            cs.setString("Lote_idLote" , Integer.toString(idLote));
                 
-                cs.setString("Enfermedad_idEnfermedad" , Integer.toString(idEnfermedad));
-                cs.executeUpdate();
-            }
+            int idEnfermedad = getIdTabla(codigoEnfermedad, "Enfermedad");
+                
+            cs.setString("Enfermedad_idEnfermedad" , Integer.toString(idEnfermedad));
+            cs.executeUpdate();
+            
         } catch (SQLException e) {
             System.err.println(e);
         }
     } 
     
-    public void insertarInsumos(ArrayList <Integer> insumos, Lote lote){
+    public void insertarInsumos(int insumos, Lote lote){
         CallableStatement cs;
         Connection con = getConexion();
         
         try {   
             cs = con.prepareCall("{ call InsertarLote_has_insumos(?,?)}");
-            int codigoInsumo;
-            for (int i = 0; i < insumos.size(); i++) {
-                codigoInsumo= insumos.get(1);
-                cs.setString("Lote_idLote" , Integer.toString(lote.getCodigoLote()));
+            int codigoInsumo = insumos;
+            int idLote = getIdTabla(lote.getCodigoLote(), "Lote");
                 
-                int idInsumo = getIdTabla(codigoInsumo, "Insumos");
+            cs.setString("Lote_idLote" , Integer.toString(idLote));
                 
-                cs.setString("Insumos_idInsumos" , Integer.toString(idInsumo));
-                cs.executeUpdate();
-            }
+            int idInsumo = getIdTabla(codigoInsumo, "Insumos");
+                
+            cs.setString("Insumos_idInsumos" , Integer.toString(idInsumo));
+            cs.executeUpdate();
         } catch (SQLException e) {
             System.err.println(e);
         }
     }     
+    
+    public void eliminarTablaHas(Lote lote, String table){
+        
+        PreparedStatement ps =null;
+        Connection con = getConexion();
+        
+        String sql = "DELETE FROM lote_has_"+ table +" WHERE Lote_idLote=?";
+        
+        try{          
+            ps = con.prepareStatement(sql);
+            System.out.println(lote.getIdLote());
+            ps.setInt(1, lote.getIdLote());
+            ps.execute();
+            
+        }catch(SQLException e){
+            System.err.println(e);
+        }
+        
+    }
     
     public int getIdTabla(int codigoTabla, String table){
         PreparedStatement ps =null;
@@ -226,10 +247,7 @@ public class ConsultarLote extends Conexion{
             return 0;
         }
     }
-    
-    
- 
-    
+       
     public int getCodigoTable(int idTable, String table){
         PreparedStatement ps =null;
         ResultSet rs = null;
