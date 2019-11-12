@@ -21,6 +21,7 @@ public class ControlMedicamento implements ActionListener{
     private Medicamento med;
     private ConsultarMedicamento medC;
     private Vista vista;  
+    private ControlLote lote;
     
     public ControlMedicamento(Medicamento med, ConsultarMedicamento medC, Vista vista ){
         this.med = med;

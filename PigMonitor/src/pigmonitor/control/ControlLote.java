@@ -53,7 +53,9 @@ public class ControlLote implements ActionListener{
             
             if(loteC.registrar(lote)){
                 
-                JOptionPane.showMessageDialog(null, "Registro Exitoso");
+                JOptionPane.showMessageDialog(null, "Registro Exitoso"); 
+                JOptionPane.showMessageDialog(null, "El Lote esta consumiendo el Alimento:"+vista.alimento_idAlimentoTextField.getText());
+                JOptionPane.showMessageDialog(null, "A el Lote se le esta suministrando el Medicamento:"+vista.medicamento_idMedicamentoTextField.getText());
                 limpiar();
             }else{
                 JOptionPane.showMessageDialog(null, "Error al Guardar");
